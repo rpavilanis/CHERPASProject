@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCA9665D1E1C64EA00C551D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9665C1E1C64EA00C551D1 /* AppDelegate.swift */; };
+		CCA9665F1E1C64EA00C551D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9665E1E1C64EA00C551D1 /* ViewController.swift */; };
+		CCA966621E1C64EA00C551D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA966601E1C64EA00C551D1 /* Main.storyboard */; };
+		CCA966641E1C64EA00C551D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA966631E1C64EA00C551D1 /* Assets.xcassets */; };
+		CCA966671E1C64EA00C551D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA966651E1C64EA00C551D1 /* LaunchScreen.storyboard */; };
+		CCA966721E1C64EA00C551D1 /* CHERPASProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA966711E1C64EA00C551D1 /* CHERPASProjectTests.swift */; };
+		CCA9667D1E1C64EA00C551D1 /* CHERPASProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9667C1E1C64EA00C551D1 /* CHERPASProjectUITests.swift */; };
+		CCA9668C1E1C65BC00C551D1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9668A1E1C65BC00C551D1 /* Realm.framework */; };
+		CCA9668D1E1C65BC00C551D1 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9668A1E1C65BC00C551D1 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CCA9668E1E1C65BC00C551D1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9668B1E1C65BC00C551D1 /* RealmSwift.framework */; };
+		CCA9668F1E1C65BC00C551D1 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9668B1E1C65BC00C551D1 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CCA966941E1C685800C551D1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA966931E1C685800C551D1 /* Task.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCA9666E1E1C64EA00C551D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA966511E1C64EA00C551D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCA966581E1C64EA00C551D1;
+			remoteInfo = CHERPASProject;
+		};
+		CCA966791E1C64EA00C551D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA966511E1C64EA00C551D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCA966581E1C64EA00C551D1;
+			remoteInfo = CHERPASProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CCA966901E1C65BD00C551D1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CCA9668F1E1C65BC00C551D1 /* RealmSwift.framework in Embed Frameworks */,
+				CCA9668D1E1C65BC00C551D1 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CCA966591E1C64EA00C551D1 /* CHERPASProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHERPASProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA9665C1E1C64EA00C551D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CCA9665E1E1C64EA00C551D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CCA966611E1C64EA00C551D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCA966631E1C64EA00C551D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCA966661E1C64EA00C551D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CCA966681E1C64EA00C551D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA9666D1E1C64EA00C551D1 /* CHERPASProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CHERPASProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA966711E1C64EA00C551D1 /* CHERPASProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHERPASProjectTests.swift; sourceTree = "<group>"; };
+		CCA966731E1C64EA00C551D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA966781E1C64EA00C551D1 /* CHERPASProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CHERPASProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA9667C1E1C64EA00C551D1 /* CHERPASProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHERPASProjectUITests.swift; sourceTree = "<group>"; };
+		CCA9667E1E1C64EA00C551D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA9668A1E1C65BC00C551D1 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		CCA9668B1E1C65BC00C551D1 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		CCA966911E1C660200C551D1 /* CHERPASProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CHERPASProject.entitlements; sourceTree = "<group>"; };
+		CCA966931E1C685800C551D1 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCA966561E1C64EA00C551D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA9668E1E1C65BC00C551D1 /* RealmSwift.framework in Frameworks */,
+				CCA9668C1E1C65BC00C551D1 /* Realm.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA9666A1E1C64EA00C551D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA966751E1C64EA00C551D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCA966501E1C64EA00C551D1 = {
+			isa = PBXGroup;
+			children = (
+				CCA9668A1E1C65BC00C551D1 /* Realm.framework */,
+				CCA9668B1E1C65BC00C551D1 /* RealmSwift.framework */,
+				CCA9665B1E1C64EA00C551D1 /* CHERPASProject */,
+				CCA966701E1C64EA00C551D1 /* CHERPASProjectTests */,
+				CCA9667B1E1C64EA00C551D1 /* CHERPASProjectUITests */,
+				CCA9665A1E1C64EA00C551D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCA9665A1E1C64EA00C551D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCA966591E1C64EA00C551D1 /* CHERPASProject.app */,
+				CCA9666D1E1C64EA00C551D1 /* CHERPASProjectTests.xctest */,
+				CCA966781E1C64EA00C551D1 /* CHERPASProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCA9665B1E1C64EA00C551D1 /* CHERPASProject */ = {
+			isa = PBXGroup;
+			children = (
+				CCA966921E1C682500C551D1 /* Model */,
+				CCA966911E1C660200C551D1 /* CHERPASProject.entitlements */,
+				CCA9665C1E1C64EA00C551D1 /* AppDelegate.swift */,
+				CCA9665E1E1C64EA00C551D1 /* ViewController.swift */,
+				CCA966601E1C64EA00C551D1 /* Main.storyboard */,
+				CCA966631E1C64EA00C551D1 /* Assets.xcassets */,
+				CCA966651E1C64EA00C551D1 /* LaunchScreen.storyboard */,
+				CCA966681E1C64EA00C551D1 /* Info.plist */,
+			);
+			path = CHERPASProject;
+			sourceTree = "<group>";
+		};
+		CCA966701E1C64EA00C551D1 /* CHERPASProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCA966711E1C64EA00C551D1 /* CHERPASProjectTests.swift */,
+				CCA966731E1C64EA00C551D1 /* Info.plist */,
+			);
+			path = CHERPASProjectTests;
+			sourceTree = "<group>";
+		};
+		CCA9667B1E1C64EA00C551D1 /* CHERPASProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CCA9667C1E1C64EA00C551D1 /* CHERPASProjectUITests.swift */,
+				CCA9667E1E1C64EA00C551D1 /* Info.plist */,
+			);
+			path = CHERPASProjectUITests;
+			sourceTree = "<group>";
+		};
+		CCA966921E1C682500C551D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCA966931E1C685800C551D1 /* Task.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCA966581E1C64EA00C551D1 /* CHERPASProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCA966811E1C64EA00C551D1 /* Build configuration list for PBXNativeTarget "CHERPASProject" */;
+			buildPhases = (
+				CCA966551E1C64EA00C551D1 /* Sources */,
+				CCA966561E1C64EA00C551D1 /* Frameworks */,
+				CCA966571E1C64EA00C551D1 /* Resources */,
+				CCA966901E1C65BD00C551D1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CHERPASProject;
+			productName = CHERPASProject;
+			productReference = CCA966591E1C64EA00C551D1 /* CHERPASProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCA9666C1E1C64EA00C551D1 /* CHERPASProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCA966841E1C64EA00C551D1 /* Build configuration list for PBXNativeTarget "CHERPASProjectTests" */;
+			buildPhases = (
+				CCA966691E1C64EA00C551D1 /* Sources */,
+				CCA9666A1E1C64EA00C551D1 /* Frameworks */,
+				CCA9666B1E1C64EA00C551D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCA9666F1E1C64EA00C551D1 /* PBXTargetDependency */,
+			);
+			name = CHERPASProjectTests;
+			productName = CHERPASProjectTests;
+			productReference = CCA9666D1E1C64EA00C551D1 /* CHERPASProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CCA966771E1C64EA00C551D1 /* CHERPASProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCA966871E1C64EA00C551D1 /* Build configuration list for PBXNativeTarget "CHERPASProjectUITests" */;
+			buildPhases = (
+				CCA966741E1C64EA00C551D1 /* Sources */,
+				CCA966751E1C64EA00C551D1 /* Frameworks */,
+				CCA966761E1C64EA00C551D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCA9667A1E1C64EA00C551D1 /* PBXTargetDependency */,
+			);
+			name = CHERPASProjectUITests;
+			productName = CHERPASProjectUITests;
+			productReference = CCA966781E1C64EA00C551D1 /* CHERPASProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCA966511E1C64EA00C551D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Rachel Pavilanis";
+				TargetAttributes = {
+					CCA966581E1C64EA00C551D1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6HJ9DKF5YK;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					CCA9666C1E1C64EA00C551D1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6HJ9DKF5YK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CCA966581E1C64EA00C551D1;
+					};
+					CCA966771E1C64EA00C551D1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6HJ9DKF5YK;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CCA966581E1C64EA00C551D1;
+					};
+				};
+			};
+			buildConfigurationList = CCA966541E1C64EA00C551D1 /* Build configuration list for PBXProject "CHERPASProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCA966501E1C64EA00C551D1;
+			productRefGroup = CCA9665A1E1C64EA00C551D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCA966581E1C64EA00C551D1 /* CHERPASProject */,
+				CCA9666C1E1C64EA00C551D1 /* CHERPASProjectTests */,
+				CCA966771E1C64EA00C551D1 /* CHERPASProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCA966571E1C64EA00C551D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA966671E1C64EA00C551D1 /* LaunchScreen.storyboard in Resources */,
+				CCA966641E1C64EA00C551D1 /* Assets.xcassets in Resources */,
+				CCA966621E1C64EA00C551D1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA9666B1E1C64EA00C551D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA966761E1C64EA00C551D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCA966551E1C64EA00C551D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA9665F1E1C64EA00C551D1 /* ViewController.swift in Sources */,
+				CCA966941E1C685800C551D1 /* Task.swift in Sources */,
+				CCA9665D1E1C64EA00C551D1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA966691E1C64EA00C551D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA966721E1C64EA00C551D1 /* CHERPASProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA966741E1C64EA00C551D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA9667D1E1C64EA00C551D1 /* CHERPASProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCA9666F1E1C64EA00C551D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCA966581E1C64EA00C551D1 /* CHERPASProject */;
+			targetProxy = CCA9666E1E1C64EA00C551D1 /* PBXContainerItemProxy */;
+		};
+		CCA9667A1E1C64EA00C551D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCA966581E1C64EA00C551D1 /* CHERPASProject */;
+			targetProxy = CCA966791E1C64EA00C551D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CCA966601E1C64EA00C551D1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCA966611E1C64EA00C551D1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CCA966651E1C64EA00C551D1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCA966661E1C64EA00C551D1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCA9667F1E1C64EA00C551D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CCA966801E1C64EA00C551D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCA966821E1C64EA00C551D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CHERPASProject/CHERPASProject.entitlements;
+				DEVELOPMENT_TEAM = 6HJ9DKF5YK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CHERPASProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachelpavilanis.CHERPASProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CCA966831E1C64EA00C551D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CHERPASProject/CHERPASProject.entitlements;
+				DEVELOPMENT_TEAM = 6HJ9DKF5YK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CHERPASProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachelpavilanis.CHERPASProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CCA966851E1C64EA00C551D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6HJ9DKF5YK;
+				INFOPLIST_FILE = CHERPASProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachelpavilanis.CHERPASProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CHERPASProject.app/CHERPASProject";
+			};
+			name = Debug;
+		};
+		CCA966861E1C64EA00C551D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6HJ9DKF5YK;
+				INFOPLIST_FILE = CHERPASProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachelpavilanis.CHERPASProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CHERPASProject.app/CHERPASProject";
+			};
+			name = Release;
+		};
+		CCA966881E1C64EA00C551D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6HJ9DKF5YK;
+				INFOPLIST_FILE = CHERPASProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachelpavilanis.CHERPASProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CHERPASProject;
+			};
+			name = Debug;
+		};
+		CCA966891E1C64EA00C551D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6HJ9DKF5YK;
+				INFOPLIST_FILE = CHERPASProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachelpavilanis.CHERPASProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = CHERPASProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCA966541E1C64EA00C551D1 /* Build configuration list for PBXProject "CHERPASProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA9667F1E1C64EA00C551D1 /* Debug */,
+				CCA966801E1C64EA00C551D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCA966811E1C64EA00C551D1 /* Build configuration list for PBXNativeTarget "CHERPASProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA966821E1C64EA00C551D1 /* Debug */,
+				CCA966831E1C64EA00C551D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CCA966841E1C64EA00C551D1 /* Build configuration list for PBXNativeTarget "CHERPASProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA966851E1C64EA00C551D1 /* Debug */,
+				CCA966861E1C64EA00C551D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CCA966871E1C64EA00C551D1 /* Build configuration list for PBXNativeTarget "CHERPASProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA966881E1C64EA00C551D1 /* Debug */,
+				CCA966891E1C64EA00C551D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCA966511E1C64EA00C551D1 /* Project object */;
+}
