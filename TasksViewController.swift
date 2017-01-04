@@ -1,5 +1,5 @@
 //
-//  CategoriesViewController.swift
+//  TasksViewController.swift
 //  CHERPASProject
 //
 //  Created by Rachel Pavilanis on 1/3/17.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-class CategoriesViewController: UITableViewController {
+class TasksViewController: UITableViewController {
 
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        // Uncomment the following line to preserve selection between presentations
-//        // self.clearsSelectionOnViewWillAppear = false
-//
-//        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-//    }
-//
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+
 //    override func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()
 //        // Dispose of any resources that can be recreated.
@@ -27,22 +27,14 @@ class CategoriesViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 0
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 7
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
-        
-        cell.textLabel?.text = "Category OR Daily Task"
-        cell.imageView?.image = UIImage(named: "first-image")
-        return cell
+        return 0
     }
 
     /*

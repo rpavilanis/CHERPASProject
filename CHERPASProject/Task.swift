@@ -25,9 +25,18 @@ final class Category: Object {
 }
 
 final class DailyTask: Object {
+    dynamic var taskId = NSUUID().uuidString
     dynamic var name = ""
     dynamic var createdAt = NSDate()
     dynamic var isCompleted = false
+    
+    override class func primaryKey() -> String? {
+        return "taskId"
+    }
+    
+    override class func indexedProperties() -> [String] {
+        return ["done"]
+    }
 }
 
 final class MonthlyGoal: Object {
