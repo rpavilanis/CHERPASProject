@@ -48,7 +48,7 @@ class CategoriesViewController: UITableViewController {
         // this code works - but not enough space to include name and task detail - just want to display task
 //        cell.textLabel?.text = categoryName
 //        cell.detailTextLabel?.text = "Daily Task Here!"
-        cell.textLabel?.text = "daily task goes here"
+        cell.textLabel?.text = dailyTasks[indexPath.row]
         cell.imageView?.image = UIImage(named: categoryName)
         
         return cell
