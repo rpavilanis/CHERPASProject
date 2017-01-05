@@ -42,13 +42,14 @@ class CategoriesViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryTableViewCell
         
         let categoryName = categories[indexPath.row]
         // this code works - but not enough space to include name and task detail - just want to display task
 //        cell.textLabel?.text = categoryName
-//        cell.detailTextLabel?.text = "Daily Task Here!"
-        cell.textLabel?.text = dailyTasks[indexPath.row]
+        cell.detailTextLabel?.text = dailyTasks[indexPath.row]
+        cell.detailTextLabel?.textColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
+        cell.textLabel?.text = categories[indexPath.row]
         cell.imageView?.image = UIImage(named: categoryName)
         
         return cell
