@@ -11,6 +11,8 @@ import UIKit
 class CategoriesViewController: UITableViewController {
     
     var categories = ["Cleanliness", "Healthy Eating", "Exercise", "Relationships", "Personal Development", "Action-Based Living", "Spirituality"]
+    
+    var dailyTasks = ["Clean kitchen", "Eat 3 servings of veggies", "Week 3, Day 1 of C25K", "Call Lila", "Read 30 minutes", "Do January budget", "Meditate 20 minutes - Headspace"]
 
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
