@@ -46,10 +46,18 @@ class DayOverviewViewController: UITableViewController {
 
          //Configure the cell...
         cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
+        
+//        cell.textLabel?.textColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
 
         return cell
     }
 
+    // This allows me to change color of section headers within my tableView 
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
+        view.tintColor = UIColor.red
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
+    }
 
     /*
     // Override to support conditional editing of the table view.
