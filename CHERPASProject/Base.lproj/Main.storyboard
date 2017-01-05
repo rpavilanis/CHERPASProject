@@ -26,7 +26,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="HNv-ow-Njf" kind="show" identifier="ShowTask" id="7c4-NS-KdL"/>
+                                    <segue destination="Aga-kV-084" kind="show" id="IY9-nh-qG3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -42,32 +42,50 @@
             <point key="canvasLocation" x="959.20000000000005" y="34.632683658170919"/>
         </scene>
         <!--Tasks View Controller-->
-        <scene sceneID="dU9-W6-EwA">
+        <scene sceneID="IfD-HJ-KVF">
             <objects>
-                <tableViewController id="HNv-ow-Njf" customClass="TasksViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="102" sectionHeaderHeight="18" sectionFooterHeight="18" id="310-DE-Qvb">
+                <viewController id="Aga-kV-084" customClass="TasksViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g5X-mJ-syX"/>
+                        <viewControllerLayoutGuide type="bottom" id="BPJ-mn-L4r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qUe-1b-WnT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="102" id="wx5-TR-XvG">
-                                <rect key="frame" x="0.0" y="56" width="375" height="102"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wx5-TR-XvG" id="LqV-s5-DH2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="HNv-ow-Njf" id="Vgd-OK-vU6"/>
-                            <outlet property="delegate" destination="HNv-ow-Njf" id="uuh-8C-U2I"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OrU-QG-Hl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Daily Task " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dU8-kN-gPG">
+                                <rect key="frame" x="16" y="104" width="343" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agD-iL-ypr">
+                                <rect key="frame" x="16" y="175" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xaf-TM-vFY">
+                                <rect key="frame" x="125" y="226" width="124" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Update Daily Task"/>
+                                <connections>
+                                    <action selector="createTask:" destination="Aga-kV-084" eventType="touchUpInside" id="zGe-fb-yKD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="TaskInput" destination="agD-iL-ypr" id="2uK-xQ-nIB"/>
+                        <outlet property="TaskLabel" destination="dU8-kN-gPG" id="OZo-vt-bbP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XX1-fp-yns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1935.2" y="40.929535232383813"/>
+            <point key="canvasLocation" x="1949.5999999999999" y="29.23538230884558"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Bl-ln-Bbc">
