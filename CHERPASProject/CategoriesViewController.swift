@@ -9,6 +9,8 @@
 import UIKit
 
 class CategoriesViewController: UITableViewController {
+    
+    var categories = ["Cleanliness", "Healthy Eating", "Exercise", "Relationships", "Personal Development", "Action-Based Living", "Spirituality"]
 
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
@@ -34,16 +36,27 @@ class CategoriesViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 7
+        return categories.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
         
-        cell.textLabel?.text = "Category OR Daily Task"
-        cell.imageView?.image = UIImage(named: "first-image")
+        let categoryName = categories[indexPath.row]
+        // this code works - but not enough space to include name and task detail - just want to display task
+//        cell.textLabel?.text = categoryName
+//        cell.detailTextLabel?.text = "Daily Task Here!"
+        cell.textLabel?.text = "daily task goes here"
+        cell.imageView?.image = UIImage(named: categoryName)
+        
         return cell
     }
+
+        
+//        cell.textLabel?.text = "Category OR Daily Task"
+//        cell.imageView?.image = UIImage(named: "first-image")
+//        return cell
+//    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
