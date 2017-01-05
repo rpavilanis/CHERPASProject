@@ -10,9 +10,9 @@ import UIKit
 
 class DayOverviewViewController: UITableViewController {
     
-    let section = ["Daily Task", "Monthly Goal", "Yearly Goal"]
+    let section = ["Daily Task", "Monthly Goal", "Yearly Goal", "Quote"]
     
-    let items = [["Clean the kitchen"], ["Clean for 15 minutes each day."], ["At monthly check-ins, the apartment will be clean and organized due to gradual daily cleaning."]]
+    let items = [["Clean the kitchen"], ["Clean for 15 minutes each day."], ["At monthly check-ins, the apartment will be clean and organized due to gradual daily cleaning."], ["Our goals can only be reached through a vehicle of a plan, in which we must fervently believe and upon which we must vigorously act. There is no other route to success."]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
