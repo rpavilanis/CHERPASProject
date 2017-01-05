@@ -58,23 +58,27 @@ class CategoriesViewController: UITableViewController {
 //        return cell
 //    }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        if indexPath.row == 0
-        {
-//            println("Segue1")
-            self.performSegue(withIdentifier: "C", sender: self)
+        
+        switch indexPath.row{
+        case 0: self.performSegue(withIdentifier: "C", sender: self)
+        break
+        case 1: self.performSegue(withIdentifier: "H", sender: self)
+        break
+        case 2: self.performSegue(withIdentifier: "E", sender: self)
+        break
+        case 3: self.performSegue(withIdentifier: "R", sender: self)
+        break
+        case 4: self.performSegue(withIdentifier: "P", sender: self)
+        break
+        case 5: self.performSegue(withIdentifier: "A", sender: self)
+        break
+        case 6: self.performSegue(withIdentifier: "S", sender: self)
+        break
+        default:
+        break
         }
-//        else if indexPath.row == 1
-//        {
-//            println("Segue2")
-//            self.performSegueWithIdentifier("Segue2", sender: self)
-//        }
-//        else if indexPath.row == 2
-//        {
-//            println("Segue3")
-//            self.performSegueWithIdentifier("Segue3", sender: self)
-//        }
         
     }
 
