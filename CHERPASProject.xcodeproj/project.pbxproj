@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CCA756281E1D8F4F00A8D4FB /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */; };
+		CCA7562A1E1ECD5100A8D4FB /* SetDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA756291E1ECD5100A8D4FB /* SetDailyViewController.swift */; };
 		CCA9665D1E1C64EA00C551D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9665C1E1C64EA00C551D1 /* AppDelegate.swift */; };
 		CCA966621E1C64EA00C551D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA966601E1C64EA00C551D1 /* Main.storyboard */; };
 		CCA966641E1C64EA00C551D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA966631E1C64EA00C551D1 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		CCA756291E1ECD5100A8D4FB /* SetDailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetDailyViewController.swift; sourceTree = "<group>"; };
 		CCA966591E1C64EA00C551D1 /* CHERPASProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHERPASProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA9665C1E1C64EA00C551D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCA966611E1C64EA00C551D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				CCA966681E1C64EA00C551D1 /* Info.plist */,
 				CCA966971E1C951800C551D1 /* CategoriesViewController.swift */,
 				CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */,
+				CCA756291E1ECD5100A8D4FB /* SetDailyViewController.swift */,
 			);
 			path = CHERPASProject;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCA966941E1C685800C551D1 /* Task.swift in Sources */,
+				CCA7562A1E1ECD5100A8D4FB /* SetDailyViewController.swift in Sources */,
 				CCA756281E1D8F4F00A8D4FB /* TasksViewController.swift in Sources */,
 				CCA9665D1E1C64EA00C551D1 /* AppDelegate.swift in Sources */,
 				CCA966981E1C951800C551D1 /* CategoriesViewController.swift in Sources */,

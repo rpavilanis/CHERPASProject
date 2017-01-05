@@ -57,6 +57,26 @@ class CategoriesViewController: UITableViewController {
 //        cell.imageView?.image = UIImage(named: "first-image")
 //        return cell
 //    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if indexPath.row == 0
+        {
+//            println("Segue1")
+            self.performSegue(withIdentifier: "C", sender: self)
+        }
+//        else if indexPath.row == 1
+//        {
+//            println("Segue2")
+//            self.performSegueWithIdentifier("Segue2", sender: self)
+//        }
+//        else if indexPath.row == 2
+//        {
+//            println("Segue3")
+//            self.performSegueWithIdentifier("Segue3", sender: self)
+//        }
+        
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
