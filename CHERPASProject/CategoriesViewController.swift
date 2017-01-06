@@ -18,6 +18,8 @@ class CategoriesViewController: UITableViewController {
         "S Goal"]
     
     var yearlyGoals = ["At monthly check-ins, the apartment will be clean and organized due to gradual daily cleaning.", "H Goal", "E Goal", "R Goal", "P Goal", "A Goal","S Goal"]
+    
+    var quotes = ["Our goals can only be reached through a vehicle of a plan, in which we must fervently believe and upon which we must vigorously act. There is no other route to success.", "H Quote", "E Quote", "R Quote", "P Quote", "A Goal","S Quote"]
 
 
     override func viewDidLoad() {
@@ -154,6 +156,9 @@ class CategoriesViewController: UITableViewController {
                 
                 let yearGoal = yearlyGoals[indexpath.row] as String
                 dayOverview.sentData3 = yearGoal
+                
+                let dailyQuote = quotes[indexpath.row] as String
+                dayOverview.sentData4 = dailyQuote
             }
         }
 

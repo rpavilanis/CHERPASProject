@@ -19,6 +19,7 @@ class DayOverviewViewController: UITableViewController {
     var sentData1:String!
     var sentData2:String!
     var sentData3:String!
+    var sentData4:String!
     
         override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +68,8 @@ class DayOverviewViewController: UITableViewController {
             cell.textLabel?.text = sentData2
         case 2:
             cell.textLabel?.text = sentData3
+        case 3:
+            cell.textLabel?.text = sentData4
         default:
             cell.textLabel?.text = "Other"
             
