@@ -26,6 +26,7 @@ class CategoriesViewController: UITableViewController {
         super.viewDidLoad()
         // This removes the label on the back bar - remove this if I want to add label back in for this.
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
 //
 //        // Uncomment the following line to preserve selection between presentations
 //        // self.clearsSelectionOnViewWillAppear = false
@@ -159,6 +160,9 @@ class CategoriesViewController: UITableViewController {
                 
                 let dailyQuote = quotes[indexpath.row] as String
                 dayOverview.sentData4 = dailyQuote
+                
+                let CHERPAS = categories[indexpath.row] as String
+                dayOverview.sentData5 = CHERPAS
             }
         }
 

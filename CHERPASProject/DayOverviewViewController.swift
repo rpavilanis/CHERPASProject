@@ -20,9 +20,12 @@ class DayOverviewViewController: UITableViewController {
     var sentData2:String!
     var sentData3:String!
     var sentData4:String!
+    var sentData5:String!
     
         override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.title = sentData5
         
         
 
