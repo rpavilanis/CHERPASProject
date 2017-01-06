@@ -10,7 +10,7 @@ import UIKit
 
 class DayOverviewViewController: UITableViewController {
     
-    let section = ["Daily Task", "Monthly Goal", "Yearly Goal", "Quote"]
+    let section = ["Daily Task", "Monthly Goal", "Yearly Goal", "Quote of the Day"]
 
     let items = [["Clean the kitchen"], ["Clean for 15 minutes each day."], ["At monthly check-ins, the apartment will be clean and organized due to gradual daily cleaning."], ["Our goals can only be reached through a vehicle of a plan, in which we must fervently believe and upon which we must vigorously act. There is no other route to success."]]
 
@@ -24,7 +24,7 @@ class DayOverviewViewController: UITableViewController {
     
         override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationItem.title = sentData5
         
         

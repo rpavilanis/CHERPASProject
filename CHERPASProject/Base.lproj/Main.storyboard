@@ -20,7 +20,7 @@
                         <color key="separatorColor" red="1" green="0.80259810379999996" blue="0.4980952199" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" textLabel="HNr-HH-I5t" detailTextLabel="jCR-4x-rZf" rowHeight="75" style="IBUITableViewCellStyleSubtitle" id="Vjd-6M-VPE" customClass="CategoryTableViewCell" customModule="CHERPASProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vjd-6M-VPE" id="Tyq-2L-nhI">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
@@ -68,7 +68,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Task" textLabel="bUb-m1-SbE" rowHeight="79" style="IBUITableViewCellStyleDefault" id="zd0-v7-IDb">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="79"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zd0-v7-IDb" id="HSJ-d3-rIt">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="78.5"/>
@@ -118,13 +118,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <segue destination="rJP-6q-C5N" kind="show" identifier="CSegue" id="xDh-Vb-Sos"/>
+                        <outlet property="categoryLetter" destination="v54-VA-mFa" id="kiw-28-W0H"/>
+                        <segue destination="rJP-6q-C5N" kind="show" id="XhJ-M0-gIj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0c-NZ-uJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="-1131"/>
+            <point key="canvasLocation" x="781.60000000000002" y="-1131.1844077961021"/>
         </scene>
         <!--Tasks View Controller-->
         <scene sceneID="IfD-HJ-KVF">
@@ -192,6 +194,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yXU-Ko-JE6"/>
+        <segue reference="XhJ-M0-gIj"/>
     </inferredMetricsTieBreakers>
 </document>
