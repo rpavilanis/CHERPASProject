@@ -23,10 +23,16 @@ class DayOverviewViewController: UITableViewController {
     var sentData5:String!
     
         override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        self.navigationItem.title = sentData5
-        
+            super.viewDidLoad()
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            self.navigationItem.title = sentData5
+            
+            
+//            tableView.backgroundColor = UIColor.black
+//            
+            
+            
+            
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -56,6 +62,8 @@ class DayOverviewViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Task", for: indexPath)
+        
+        cell.selectionStyle = .none
 
          //Configure the cell...
 //        cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
@@ -78,6 +86,7 @@ class DayOverviewViewController: UITableViewController {
             
         }
         return cell
+        
     }
 
     // This allows me to change color of section headers within my tableView
@@ -130,5 +139,19 @@ class DayOverviewViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+//     not working - can see delete but not deleting anything.  Need to make it so that quotes can't be deleted.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Hello - delete happening!")
+            // this is where I would remove from database
+            //            objects.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            print("Hello!")
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+        }
+    }
+
 
 }

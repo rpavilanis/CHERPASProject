@@ -13,28 +13,36 @@
         <scene sceneID="Ch7-nW-fKB">
             <objects>
                 <tableViewController id="uuk-7e-Vz1" customClass="CategoriesViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="75" sectionHeaderHeight="18" sectionFooterHeight="18" id="XAT-T9-YT4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="67" sectionHeaderHeight="18" sectionFooterHeight="18" id="XAT-T9-YT4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" red="1" green="0.80259810379999996" blue="0.4980952199" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HBh-3N-OAU">
+                            <rect key="frame" x="0.0" y="141" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Set my Daily Tasks"/>
+                            <connections>
+                                <segue destination="rY5-hq-9JS" kind="presentation" id="jzi-y2-q4z"/>
+                            </connections>
+                        </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" textLabel="HNr-HH-I5t" detailTextLabel="jCR-4x-rZf" rowHeight="75" style="IBUITableViewCellStyleSubtitle" id="Vjd-6M-VPE" customClass="CategoryTableViewCell" customModule="CHERPASProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="56" width="375" height="75"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" textLabel="HNr-HH-I5t" detailTextLabel="jCR-4x-rZf" rowHeight="67" style="IBUITableViewCellStyleSubtitle" id="Vjd-6M-VPE" customClass="CategoryTableViewCell" customModule="CHERPASProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="56" width="375" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vjd-6M-VPE" id="Tyq-2L-nhI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HNr-HH-I5t">
-                                            <rect key="frame" x="15" y="15" width="37" height="22.5"/>
+                                            <rect key="frame" x="15" y="10" width="37" height="23"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jCR-4x-rZf">
-                                            <rect key="frame" x="15" y="37.5" width="63.5" height="22.5"/>
+                                            <rect key="frame" x="15" y="33" width="64" height="23"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -56,7 +64,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESO-od-b7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="35"/>
+            <point key="canvasLocation" x="117.59999999999999" y="34.632683658170919"/>
         </scene>
         <!--Day Overview View Controller-->
         <scene sceneID="T7r-9v-Fyo">
@@ -121,12 +129,12 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="categoryLetter" destination="v54-VA-mFa" id="kiw-28-W0H"/>
-                        <segue destination="rJP-6q-C5N" kind="show" id="XhJ-M0-gIj"/>
+                        <segue destination="uuk-7e-Vz1" kind="show" identifier="endDaily" id="hmC-vZ-LOc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0c-NZ-uJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="781.60000000000002" y="-1131.1844077961021"/>
+            <point key="canvasLocation" x="118" y="-676"/>
         </scene>
         <!--Tasks View Controller-->
         <scene sceneID="IfD-HJ-KVF">
@@ -194,6 +202,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XhJ-M0-gIj"/>
+        <segue reference="hmC-vZ-LOc"/>
     </inferredMetricsTieBreakers>
 </document>
