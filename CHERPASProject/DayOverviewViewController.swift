@@ -13,9 +13,16 @@ class DayOverviewViewController: UITableViewController {
     let section = ["Daily Task", "Monthly Goal", "Yearly Goal"]
     
     let items = [["Clean the kitchen"], ["Clean for 15 minutes each day."], ["At monthly check-ins, the apartment will be clean and organized due to gradual daily cleaning."]]
-
+    
+    // stores dailyTask information passed from category view
+    var sentData1:String!
+    var sentData2:String!
+    var sentData3:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -52,7 +59,7 @@ class DayOverviewViewController: UITableViewController {
         return cell
     }
 
-    // This allows me to change color of section headers within my tableView 
+    // This allows me to change color of section headers within my tableView
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
         view.tintColor = UIColor.red
         let header = view as! UITableViewHeaderFooterView
