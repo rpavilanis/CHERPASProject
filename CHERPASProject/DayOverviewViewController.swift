@@ -44,7 +44,8 @@ class DayOverviewViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.items [section].count
+//        return self.items [section].count
+        return 1
     }
 
 
@@ -52,16 +53,28 @@ class DayOverviewViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Task", for: indexPath)
 
          //Configure the cell...
-        cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
-        
-//        cell.textLabel?.textColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
-
+//        cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
+//        
+////        cell.textLabel?.textColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
+//
+//        return cell
+        switch (indexPath.section)
+        {
+        case 0:
+            cell.textLabel?.text = sentData1
+        case 1:
+            cell.textLabel?.text = sentData2
+        case 2:
+            cell.textLabel?.text = sentData3
+        default:
+            cell.textLabel?.text = "Other"
+            
+        }
         return cell
     }
 
     // This allows me to change color of section headers within my tableView
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
-        view.tintColor = UIColor.red
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
     }
