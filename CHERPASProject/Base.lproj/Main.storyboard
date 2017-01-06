@@ -19,22 +19,32 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" red="1" green="0.80259810379999996" blue="0.4980952199" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" textLabel="HNr-HH-I5t" rowHeight="75" style="IBUITableViewCellStyleDefault" id="Vjd-6M-VPE">
-                                <rect key="frame" x="0.0" y="56" width="375" height="75"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" textLabel="HNr-HH-I5t" detailTextLabel="jCR-4x-rZf" rowHeight="75" style="IBUITableViewCellStyleSubtitle" id="Vjd-6M-VPE" customClass="CategoryTableViewCell" customModule="CHERPASProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vjd-6M-VPE" id="Tyq-2L-nhI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HNr-HH-I5t">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="74"/>
+                                            <rect key="frame" x="15" y="15" width="37" height="22.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jCR-4x-rZf">
+                                            <rect key="frame" x="15" y="37.5" width="63.5" height="22.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="rJP-6q-C5N" kind="show" identifier="dayOverview" id="yXU-Ko-JE6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -43,9 +53,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Daily Tasks" id="6Eb-dv-CTF"/>
-                    <connections>
-                        <segue destination="rJP-6q-C5N" kind="show" identifier="C" id="qrv-en-Umr"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESO-od-b7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,6 +67,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
+<<<<<<< HEAD
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Task" textLabel="bUb-m1-SbE" rowHeight="109" style="IBUITableViewCellStyleDefault" id="zd0-v7-IDb">
                                 <rect key="frame" x="0.0" y="56" width="375" height="109"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -69,6 +77,17 @@
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bUb-m1-SbE">
                                             <rect key="frame" x="15" y="0.0" width="345" height="108"/>
+=======
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Task" textLabel="bUb-m1-SbE" style="IBUITableViewCellStyleDefault" id="zd0-v7-IDb">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zd0-v7-IDb" id="HSJ-d3-rIt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bUb-m1-SbE">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+>>>>>>> 2486e603af0605d1a86dcb4fa0dcf8cd0539e729
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -185,6 +204,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qrv-en-Umr"/>
+        <segue reference="yXU-Ko-JE6"/>
     </inferredMetricsTieBreakers>
 </document>

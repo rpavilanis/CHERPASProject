@@ -11,11 +11,19 @@ import UIKit
 class DayOverviewViewController: UITableViewController {
     
     let section = ["Daily Task", "Monthly Goal", "Yearly Goal", "Quote"]
-    
+
     let items = [["Clean the kitchen"], ["Clean for 15 minutes each day."], ["At monthly check-ins, the apartment will be clean and organized due to gradual daily cleaning."], ["Our goals can only be reached through a vehicle of a plan, in which we must fervently believe and upon which we must vigorously act. There is no other route to success."]]
 
-    override func viewDidLoad() {
+    
+    // stores dailyTask information passed from category view
+    var sentData1:String!
+    var sentData2:String!
+    var sentData3:String!
+    
+        override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -37,7 +45,8 @@ class DayOverviewViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.items [section].count
+//        return self.items [section].count
+        return 1
     }
 
 
@@ -45,11 +54,31 @@ class DayOverviewViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Task", for: indexPath)
 
          //Configure the cell...
-        cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
-
+//        cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
+//        
+////        cell.textLabel?.textColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
+//
+//        return cell
+        switch (indexPath.section)
+        {
+        case 0:
+            cell.textLabel?.text = sentData1
+        case 1:
+            cell.textLabel?.text = sentData2
+        case 2:
+            cell.textLabel?.text = sentData3
+        default:
+            cell.textLabel?.text = "Other"
+            
+        }
         return cell
     }
 
+    // This allows me to change color of section headers within my tableView
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
+    }
 
     /*
     // Override to support conditional editing of the table view.
