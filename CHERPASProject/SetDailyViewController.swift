@@ -9,6 +9,8 @@
 import UIKit
 
 class SetDailyViewController: UIViewController {
+    @IBOutlet weak var categoryLetter: UILabel!
+    var categoryLetters = ["C", "H", "E", "R", "P", "A", "S"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +33,33 @@ class SetDailyViewController: UIViewController {
     
     func swipeGesture(sender: UISwipeGestureRecognizer) {
         if sender.direction == .left {
-            print("Left")
+//            print("Left")
+            let letter = categoryLetter.text!
+            switch letter {
+                case "C": categoryLetter.text = "H"
+                break
+                case "H": categoryLetter.text = "E"
+                break
+                case "E": categoryLetter.text = "R"
+                break
+                case "R": categoryLetter.text = "P"
+                break
+                case "P": categoryLetter.text = "A"
+                break
+                case "A": categoryLetter.text = "S"
+                break
+                case "S": self.performSegue(withIdentifier: "endDaily", sender: self)
+                break
+                default:
+                self.performSegue(withIdentifier: "endDaily", sender: self)
+                break
+                }
+
+//            categoryLetter.text = "H"
         }
         
         if sender.direction == .up {
-            self.performSegue(withIdentifier: "CSegue", sender: self)
+            self.performSegue(withIdentifier: "setDailySegue", sender: self)
         }
         
     }
