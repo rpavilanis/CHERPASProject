@@ -72,30 +72,6 @@ class CategoriesViewController: UITableViewController {
 //        return cell
 //    }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-//    {
-//        
-//        switch indexPath.row{
-//        case 0: self.performSegue(withIdentifier: "dayOverview", sender: self)
-//        break
-//        case 1: self.performSegue(withIdentifier: "H", sender: self)
-//        break
-//        case 2: self.performSegue(withIdentifier: "E", sender: self)
-//        break
-//        case 3: self.performSegue(withIdentifier: "R", sender: self)
-//        break
-//        case 4: self.performSegue(withIdentifier: "P", sender: self)
-//        break
-//        case 5: self.performSegue(withIdentifier: "A", sender: self)
-//        break
-//        case 6: self.performSegue(withIdentifier: "S", sender: self)
-//        break
-//        default:
-//        break
-//        }
-//        
-//    }
-
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

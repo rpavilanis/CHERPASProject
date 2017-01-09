@@ -9,10 +9,10 @@
 import UIKit
 
 class SetDailyViewController: UIViewController {
-    
+
     @IBOutlet weak var categoryLetter: UILabel!
     var categoryLetters = ["C", "H", "E", "R", "P", "A", "S"]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,6 +60,7 @@ class SetDailyViewController: UIViewController {
             }
             
             //            categoryLetter.text = "H"
+
         }
         
         if sender.direction == .up {

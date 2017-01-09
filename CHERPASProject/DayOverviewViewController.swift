@@ -37,10 +37,7 @@ class DayOverviewViewController: UITableViewController {
 //            tableView.backgroundColor = UIColor.black
 //            
             
-            
-            
         
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
