@@ -74,6 +74,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="separatorColor" red="0.99606943130000003" green="0.86595577000000001" blue="0.59210634230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Task" textLabel="bUb-m1-SbE" rowHeight="79" style="IBUITableViewCellStyleDefault" id="zd0-v7-IDb" customClass="DayOverviewTableViewCell" customModule="CHERPASProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="56" width="375" height="79"/>
