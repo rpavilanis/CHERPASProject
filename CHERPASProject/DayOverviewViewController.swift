@@ -162,6 +162,7 @@ class DayOverviewViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
 //        super.tableView(tableView, editActionsForRowAt: indexPath)
+        
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
             print("delete button tapped")
         }
@@ -176,7 +177,14 @@ class DayOverviewViewController: UITableViewController {
         
         // need to adjust this with if statement once add in model - if task is complete already, need to be able to change to incomplete
         let markComplete = UITableViewRowAction(style: .normal, title: "Complete") { action, index in
-            print("complete button tapped")
+            print(indexPath)
+//            let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: message)
+//            attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+//            
+//            cell.textLabel?.attributedText =  attributeString
+            //remove strikethrough
+            // cell.textLabel?.attributedText =  nil
+            
         }
         markComplete.backgroundColor = UIColor(red: 0/255, green: 66/255, blue: 89/255, alpha: 1.0)
         return [edit, delete, markComplete]

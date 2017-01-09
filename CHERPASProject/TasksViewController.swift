@@ -28,12 +28,13 @@ class TasksViewController: UIViewController {
     
     
     @IBAction func createTask(_ sender: UIButton) {
-        let realm = try! Realm()
-        let task = DailyTask(value: ["name": TaskInput.text!]) //should be name: but won't let me put that
-        //to add to realm
-        try! realm.write {
-            realm.add(task)
-        }
+//        let realm = try! Realm()
+//        let task = DailyTask(value: ["name": TaskInput.text!]) //should be name: but won't let me put that
+//        //to add to realm
+//        try! realm.write {
+//            realm.add(task)
+//        }
+        dismiss(animated: true, completion: nil)
     }
     
     
