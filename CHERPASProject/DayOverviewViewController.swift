@@ -27,6 +27,12 @@ class DayOverviewViewController: UITableViewController {
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             self.navigationItem.title = sentData5
             
+//            let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(DayOverviewViewController.didSwipe(gestureRecognizer:)))
+//            self.view.addGestureRecognizer(swipeLeft)
+
+            
+            
+            
             
 //            tableView.backgroundColor = UIColor.black
 //            
@@ -43,6 +49,20 @@ class DayOverviewViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+//    func didSwipe(gestureRecognizer:UIGestureRecognizer) {
+//        
+//        if gestureRecognizer.state == UIGestureRecognizerState.ended {
+//            let swipeLocation = gestureRecognizer.location(in: self.tableView)
+//            if let swipedIndexPath = self.tableView.indexPathForRow(at: swipeLocation){
+//                if self.tableView.cellForRow(at: swipedIndexPath) != nil{
+//                    print(swipedIndexPath)
+//                    
+//                    
+//                }
+//            }
+//        }
+//    }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.section [section]
@@ -140,18 +160,58 @@ class DayOverviewViewController: UITableViewController {
     }
     */
     
-//     not working - can see delete but not deleting anything.  Need to make it so that quotes can't be deleted.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            print("Hello - delete happening!")
-            // this is where I would remove from database
-            //            objects.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            print("Hello!")
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+//        super.tableView(tableView, editActionsForRowAt: indexPath)
+        
+        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+            print("delete button tapped")
         }
+        delete.backgroundColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
+
+
+    
+        let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
+            print("edit button tapped")
+        }
+        edit.backgroundColor = UIColor(red: 130/255, green: 208/255, blue: 216/255, alpha: 1.0)
+        
+        // need to adjust this with if statement once add in model - if task is complete already, need to be able to change to incomplete
+        let markComplete = UITableViewRowAction(style: .normal, title: "Complete") { action, index in
+            print(indexPath)
+//            let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: message)
+//            attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+//            
+//            cell.textLabel?.attributedText =  attributeString
+            //remove strikethrough
+            // cell.textLabel?.attributedText =  nil
+            
+        }
+        markComplete.backgroundColor = UIColor(red: 0/255, green: 66/255, blue: 89/255, alpha: 1.0)
+        return [edit, delete, markComplete]
     }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        // you need to implement this method too or you can't swipe to display the actions
+    }
+    
+//     not working - can see delete but not deleting anything.  Need to make it so that quotes can't be deleted.
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            print("Hello - delete happening!")
+//            // this is where I would remove from database
+//            //            objects.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        } else if editingStyle == .insert {
+//            print("Hello!")
+//            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+//        }
+//    }
 
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC7DF91F1E2056790079A53E /* DayOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DF91E1E2056790079A53E /* DayOverviewTableViewCell.swift */; };
 		CCA756281E1D8F4F00A8D4FB /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */; };
 		CCA7562A1E1ECD5100A8D4FB /* SetDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA756291E1ECD5100A8D4FB /* SetDailyViewController.swift */; };
 		CCA7562C1E1ED9BF00A8D4FB /* DayOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA7562B1E1ED9BF00A8D4FB /* DayOverviewViewController.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC7DF91E1E2056790079A53E /* DayOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		CCA756291E1ECD5100A8D4FB /* SetDailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetDailyViewController.swift; sourceTree = "<group>"; };
 		CCA7562B1E1ED9BF00A8D4FB /* DayOverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOverviewViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */,
 				CCA756291E1ECD5100A8D4FB /* SetDailyViewController.swift */,
 				CCA7562B1E1ED9BF00A8D4FB /* DayOverviewViewController.swift */,
+				CC7DF91E1E2056790079A53E /* DayOverviewTableViewCell.swift */,
 			);
 			path = CHERPASProject;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCA7562C1E1ED9BF00A8D4FB /* DayOverviewViewController.swift in Sources */,
+				CC7DF91F1E2056790079A53E /* DayOverviewTableViewCell.swift in Sources */,
 				CCA966941E1C685800C551D1 /* Task.swift in Sources */,
 				CCA7562A1E1ECD5100A8D4FB /* SetDailyViewController.swift in Sources */,
 				CCA756281E1D8F4F00A8D4FB /* TasksViewController.swift in Sources */,
