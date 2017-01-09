@@ -35,13 +35,17 @@ class TasksViewController: UIViewController {
 //            realm.add(task)
 //        }
         
-        
+        // on button click, adds this task to the Realm database
         let task = DailyTask()
         task.name = TaskInput.text!
+        task.category = "Cleanliness"
         let realm = try! Realm()
         try! realm.write {
             realm.add(task)
             print("Added \(task.name) to Realm")
+            print(task.isCompleted)
+            print(task.createdAt)
+            print(task.category)
         }
     
         dismiss(animated: true, completion: nil)
