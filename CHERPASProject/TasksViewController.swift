@@ -34,6 +34,16 @@ class TasksViewController: UIViewController {
 //        try! realm.write {
 //            realm.add(task)
 //        }
+        
+        
+        let task = DailyTask()
+        task.name = TaskInput.text!
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(task)
+            print("Added \(task.name) to Realm")
+        }
+    
         dismiss(animated: true, completion: nil)
     }
     

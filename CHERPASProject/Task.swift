@@ -12,16 +12,16 @@ import RealmSwift
 
 // Model
 
-final class Category: Object {
-    dynamic var name = ""
-    dynamic var id = NSUUID().uuidString
-    // a category has many tasks
-    let tasks = List<DailyTask>()
-    let goals = List<Goal>()
-    override static func primaryKey() -> String? {
-        return "id"
-    }
-}
+//final class Category: Object {
+//    dynamic var name = ""
+//    dynamic var id = NSUUID().uuidString
+//    // a category has many tasks
+//    let tasks = List<DailyTask>()
+//    let goals = List<Goal>()
+//    override static func primaryKey() -> String? {
+//        return "id"
+//    }
+//}
 
 final class DailyTask: Object {
     dynamic var taskId = NSUUID().uuidString
@@ -29,8 +29,8 @@ final class DailyTask: Object {
     dynamic var createdAt = NSDate()
     dynamic var isCompleted = false
     // a task belongs to one category
-    dynamic var category: Category?
-    let goals = List<Goal>()
+//    dynamic var category: Category?
+//    let goals = List<Goal>()
     
     override class func primaryKey() -> String? {
         return "taskId"
@@ -41,17 +41,19 @@ final class DailyTask: Object {
 //    }
 }
 
-final class Goal: Object {
-    dynamic var desc = ""
-    dynamic var createdAt = NSDate()
-    dynamic var isCompleted = false
-    // will be month or year
-    dynamic var timeSpan = ""
-    // a goal belongs to one category
-    dynamic var category: Category?
-    // a goal belongs to one task
-    dynamic var task: DailyTask?
-}
+//final class Goal: Object {
+//    dynamic var desc = ""
+//    dynamic var createdAt = NSDate()
+//    dynamic var isCompleted = false
+//    // will be month or year
+//    dynamic var timeSpan = ""
+//    // a goal belongs to one category
+//    dynamic var category: Category?
+//    // a goal belongs to one task
+//    dynamic var task: DailyTask?
+//}
+//
+
 
 
 
