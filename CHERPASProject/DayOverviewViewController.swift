@@ -22,9 +22,11 @@ class DayOverviewViewController: UITableViewController {
     var sentData3:String!
     var sentData4:String!
     var sentData5:String!
+    var dailyTask = [String]()
     
         override func viewDidLoad() {
             super.viewDidLoad()
+            queryTasks()
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             self.navigationItem.title = sentData5
             
@@ -74,7 +76,7 @@ class DayOverviewViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
 //        return self.items [section].count
-        return 1
+        return dailyTask.count 
     }
 
 
@@ -92,7 +94,7 @@ class DayOverviewViewController: UITableViewController {
         switch (indexPath.section)
         {
         case 0:
-            cell.textLabel?.text = sentData1
+            cell.textLabel?.text = dailyTask[indexPath.row]
         case 1:
             cell.textLabel?.text = sentData2
         case 2:
@@ -224,8 +226,14 @@ class DayOverviewViewController: UITableViewController {
         let realm = try! Realm()
         
         let allTasks = realm.objects(DailyTask)
+        // will also need to add filter so that it includes only appropriate category as well
         let currentTask = allTasks.filter("createdAt BETWEEN %@", [todayStart, todayEnd])
-        print(currentTask)
+        
+        for task in currentTask{
+            dailyTask.append(task.name)
+        
+        tableView.reloadData()
+        }
         
     }
     
