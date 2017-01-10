@@ -60,28 +60,31 @@ class SetDailyViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let TasksView = (segue.destination as! TasksViewController)
-        // this function ensures the correct category is passed in with the manual segue that goes to the add form, which allows a task to be added to the correct category.
         
-        let letter = categoryLetter.text!
-        
-        switch letter {
-        case "C": TasksView.passedCategory = "Cleanliness"
-            break
-        case "H": TasksView.passedCategory = "Healthy Eating"
-            break
-        case "E": TasksView.passedCategory = "Exercise"
-            break
-        case "R": TasksView.passedCategory = "Relationships"
-            break
-        case "P": TasksView.passedCategory = "Personal Development"
-            break
-        case "A": TasksView.passedCategory = "Action-Based Living"
-            break
-        case "S": TasksView.passedCategory = "Spirituality"
-            break
-        default: TasksView.passedCategory = ""
-            break
+        if segue.identifier == "setDailySegue" {
+            let TasksView = (segue.destination as! TasksViewController)
+            // this function ensures the correct category is passed in with the manual segue that goes to the add form, which allows a task to be added to the correct category.
+            
+            let letter = categoryLetter.text!
+            
+            switch letter {
+            case "C": TasksView.passedCategory = "Cleanliness"
+                break
+            case "H": TasksView.passedCategory = "Healthy Eating"
+                break
+            case "E": TasksView.passedCategory = "Exercise"
+                break
+            case "R": TasksView.passedCategory = "Relationships"
+                break
+            case "P": TasksView.passedCategory = "Personal Development"
+                break
+            case "A": TasksView.passedCategory = "Action-Based Living"
+                break
+            case "S": TasksView.passedCategory = "Spirituality"
+                break
+            default: TasksView.passedCategory = ""
+                break
+            }
         }
     }
     

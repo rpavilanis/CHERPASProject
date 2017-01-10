@@ -21,9 +21,6 @@ class TasksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         TaskLabel.text = "Add Daily Task for " + passedCategory
-        
-        self.view.backgroundColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
-
 
         // Do any additional setup after loading the view - load data and redisplay
         
