@@ -34,7 +34,6 @@ class SetDailyViewController: UIViewController {
     
     func swipeGesture(sender: UISwipeGestureRecognizer) {
         if sender.direction == .left {
-            //            print("Left")
             let letter = categoryLetter.text!
             switch letter {
             case "C": categoryLetter.text = "H"
@@ -50,17 +49,12 @@ class SetDailyViewController: UIViewController {
             case "A": categoryLetter.text = "S"
                 break
             case "S":
-                print("Hello")
-//                self.performSegue(withIdentifier: "endDaily", sender: self)
+                self.performSegue(withIdentifier: "endDaily", sender: self)
                 break
             default:
-                  print("Hello")
-//                self.performSegue(withIdentifier: "endDaily", sender: self)
+                self.performSegue(withIdentifier: "endDaily", sender: self)
                 break
             }
-            
-            //            categoryLetter.text = "H"
-
         }
         
         if sender.direction == .up {

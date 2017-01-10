@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 
 class DayOverviewViewController: UITableViewController {
+
     
     let section = ["Daily Task", "Monthly Goal", "Yearly Goal", "Quote of the Day"]
 
@@ -22,11 +23,11 @@ class DayOverviewViewController: UITableViewController {
     var sentData3:String!
     var sentData4:String!
     var sentData5:String!
-//    var dailyTask = [String]()
+    var dailyTask = [String]()
     
         override func viewDidLoad() {
             super.viewDidLoad()
-//            queryTasks()
+            queryTasks()
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             self.navigationItem.title = sentData5
             
@@ -94,7 +95,7 @@ class DayOverviewViewController: UITableViewController {
         switch (indexPath.section)
         {
         case 0:
-            cell.textLabel?.text = sentData1
+            cell.textLabel?.text = dailyTask[indexPath.row]
         case 1:
             cell.textLabel?.text = sentData2
         case 2:
@@ -164,7 +165,25 @@ class DayOverviewViewController: UITableViewController {
 //        super.tableView(tableView, editActionsForRowAt: indexPath)
         
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
-            print("delete button tapped")
+//            print("delete button tapped")
+            let todayStart = Calendar.current.startOfDay(for: Date() as Date)
+            let todayEnd: Date = {
+                var components = DateComponents()
+                components.day = 1
+                components.second = -1
+                return Calendar.current.date(byAdding: components, to: todayStart)!
+            }()
+            
+            let realm = try! Realm()
+            
+            let allTasks = realm.objects(DailyTask)
+            // will also need to add filter so that it includes only appropriate category as well
+            let currentTask = allTasks.filter("createdAt BETWEEN %@", [todayStart, todayEnd])
+//            let realm = try! Realm()
+            try! realm.write {
+                print("in delete function")
+                realm.delete(currentTask)
+            }
         }
         delete.backgroundColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
 
@@ -213,31 +232,29 @@ class DayOverviewViewController: UITableViewController {
 //        }
 //    }
     
-//    func queryTasks() {
-//        
-//        let todayStart = Calendar.current.startOfDay(for: Date() as Date)
-//        let todayEnd: Date = {
-//            var components = DateComponents()
-//            components.day = 1
-//            components.second = -1
-//            return Calendar.current.date(byAdding: components, to: todayStart)!
-//        }()
-//        
-//        let realm = try! Realm()
-//        
-//        let allTasks = realm.objects(DailyTask)
-//        // will also need to add filter so that it includes only appropriate category as well
-//        let currentTask = allTasks.filter("createdAt BETWEEN %@", [todayStart, todayEnd])
-//        
-//        for task in currentTask{
-//            dailyTask.append(task.name)
-//        
-//        tableView.reloadData()
-//        }
-//        
-//    }
+    func queryTasks() {
+        
+        let todayStart = Calendar.current.startOfDay(for: Date() as Date)
+        let todayEnd: Date = {
+            var components = DateComponents()
+            components.day = 1
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: todayStart)!
+        }()
+        
+        let realm = try! Realm()
+        
+        let allTasks = realm.objects(DailyTask)
+        // will also need to add filter so that it includes only appropriate category as well
+        let currentTask = allTasks.filter("createdAt BETWEEN %@", [todayStart, todayEnd])
+        
+        for task in currentTask{
+            dailyTask.append(task.name)
+        
+        tableView.reloadData()
+        }
+        
+    }
     
-    
-
 
 }
