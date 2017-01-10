@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DayOverviewViewController: UITableViewController {
     
@@ -209,6 +210,26 @@ class DayOverviewViewController: UITableViewController {
 //            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
 //        }
 //    }
+    
+    func queryTasks() {
+        
+        let todayStart = Calendar.current.startOfDay(for: Date() as Date)
+        let todayEnd: Date = {
+            var components = DateComponents()
+            components.day = 1
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: todayStart)!
+        }()
+        
+        let realm = try! Realm()
+        
+        let allTasks = realm.objects(DailyTask)
+        let currentTask = allTasks.filter("createdAt BETWEEN %@", [todayStart, todayEnd])
+        print(currentTask)
+        
+    }
+    
+    
 
 
 }

@@ -64,7 +64,32 @@ class SetDailyViewController: UIViewController {
         }
         
         if sender.direction == .up {
-            self.performSegue(withIdentifier: "setDailySegue", sender: self)
+            
+            let letter = categoryLetter.text!
+        
+            switch letter {
+            case "C":
+                    self.performSegue(withIdentifier: "setDailySegue", sender: self)
+                    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                    let TasksView = (segue.destination as! TasksViewController)
+                    TasksView.passedCategory = "Cleanliness"
+                    }
+                break
+            case "H": self.performSegue(withIdentifier: "setDailySegue", sender: self)
+                break
+            case "E": self.performSegue(withIdentifier: "setDailySegue", sender: self)
+                break
+            case "R": self.performSegue(withIdentifier: "setDailySegue", sender: self)
+                break
+            case "P": self.performSegue(withIdentifier: "setDailySegue", sender: self)
+                break
+            case "A": self.performSegue(withIdentifier: "setDailySegue", sender: self)
+                break
+            case "S": self.performSegue(withIdentifier: "setDailySegue", sender: self)
+                break
+            default: self.performSegue(withIdentifier: "setDailySegue", sender: self)
+                break
+            }
         }
         
     }

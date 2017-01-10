@@ -9,8 +9,12 @@
 import UIKit
 import RealmSwift
 
+
+
 class TasksViewController: UIViewController {
     // outlets and variables
+    var passedCategory:String!
+    
     @IBOutlet weak var TaskLabel: UILabel!
     @IBOutlet weak var TaskInput: UITextField!
 
@@ -38,7 +42,7 @@ class TasksViewController: UIViewController {
         // on button click, adds this task to the Realm database
         let task = DailyTask()
         task.name = TaskInput.text!
-        task.category = "Cleanliness"
+//        task.category = passedCategory
         let realm = try! Realm()
         try! realm.write {
             realm.add(task)
