@@ -173,22 +173,16 @@ class DayOverviewViewController: UITableViewController {
                 components.second = -1
                 return Calendar.current.date(byAdding: components, to: todayStart)!
             }()
-            
             let realm = try! Realm()
-            
             let allTasks = realm.objects(DailyTask)
-            // will also need to add filter so that it includes only appropriate category as well
             let currentTask = allTasks.filter("createdAt BETWEEN %@", [todayStart, todayEnd])
-//            let realm = try! Realm()
+//            currently this works to delete targeted object, HOWEVER - then my array shifts and things move around.
             try! realm.write {
-                print("in delete function")
                 realm.delete(currentTask[indexPath.row])
             }
         }
         delete.backgroundColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
 
-
-    
         let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
             print("edit button tapped")
         }

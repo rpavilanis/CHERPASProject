@@ -42,7 +42,7 @@ class TasksViewController: UIViewController {
         // on button click, adds this task to the Realm database
         let task = DailyTask()
         task.name = TaskInput.text!
-        task.category = "Healthy Eating"
+        task.category = passedCategory
         let realm = try! Realm()
         try! realm.write {
             realm.add(task)
