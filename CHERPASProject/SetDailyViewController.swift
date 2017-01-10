@@ -27,11 +27,6 @@ class SetDailyViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func swipeGesture(sender: UISwipeGestureRecognizer) {
         if sender.direction == .left {
             let letter = categoryLetter.text!
@@ -66,6 +61,7 @@ class SetDailyViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let TasksView = (segue.destination as! TasksViewController)
+        // this function ensures the correct category is passed in with the manual segue that goes to the add form, which allows a task to be added to the correct category.
         
         let letter = categoryLetter.text!
         

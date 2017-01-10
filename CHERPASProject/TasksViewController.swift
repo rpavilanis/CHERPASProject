@@ -20,10 +20,14 @@ class TasksViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        TaskLabel.text = "Add Daily Task for " + passedCategory
+        
+        self.view.backgroundColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
+
 
         // Do any additional setup after loading the view - load data and redisplay
         
-         TaskInput.text = "current daily task" // eventually have an if statement that references only current daily task
+//         TaskInput.text = "current daily task" // eventually have an if statement that references only current daily task
         
     }
 
@@ -32,13 +36,6 @@ class TasksViewController: UIViewController {
     
     
     @IBAction func createTask(_ sender: UIButton) {
-//        let realm = try! Realm()
-//        let task = DailyTask(value: ["name": TaskInput.text!]) //should be name: but won't let me put that
-//        //to add to realm
-//        try! realm.write {
-//            realm.add(task)
-//        }
-        
         // on button click, adds this task to the Realm database
         let task = DailyTask()
         task.name = TaskInput.text!
@@ -51,7 +48,6 @@ class TasksViewController: UIViewController {
             print(task.createdAt)
             print(task.category)
         }
-    
         dismiss(animated: true, completion: nil)
     }
     
