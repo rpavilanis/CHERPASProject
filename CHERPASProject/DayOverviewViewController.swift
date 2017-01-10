@@ -182,7 +182,7 @@ class DayOverviewViewController: UITableViewController {
 //            let realm = try! Realm()
             try! realm.write {
                 print("in delete function")
-                realm.delete(currentTask)
+                realm.delete(currentTask[indexPath.row])
             }
         }
         delete.backgroundColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
