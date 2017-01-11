@@ -25,7 +25,7 @@ class DayOverviewViewController: UITableViewController {
     
         override func viewDidLoad() {
             super.viewDidLoad()
-            queryTasks()
+//            queryTasks()
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             self.navigationItem.title = sentData5
             
@@ -118,23 +118,13 @@ class DayOverviewViewController: UITableViewController {
 //        super.tableView(tableView, editActionsForRowAt: indexPath)
         
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
-//            print("delete button tapped")
-//            let todayStart = Calendar.current.startOfDay(for: Date() as Date)
-//            let todayEnd: Date = {
-//                var components = DateComponents()
-//                components.day = 1
-//                components.second = -1
-//                return Calendar.current.date(byAdding: components, to: todayStart)!
-//            }()
             let realm = try! Realm()
-            let selectedTask = realm.objects(DailyTask.self)[indexPath.row]
-//            let currentTask = allTasks.filter("createdAt BETWEEN %@", [todayStart, todayEnd])
-//            currently this works to delete targeted object, HOWEVER - then my array shifts and things move around.
+            let selectedTask = realm.objects(DailyTask)[indexPath.row]
             try! realm.write {
                 realm.delete(selectedTask)
-                let paths = [indexPath]
-                self.tableView.reloadRows(at: paths, with: UITableViewRowAnimation.none)
             }
+            let paths = [indexPath]
+            self.tableView.reloadRows(at: paths, with: UITableViewRowAnimation.none)
         }
         delete.backgroundColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
 
@@ -198,28 +188,28 @@ class DayOverviewViewController: UITableViewController {
 //        }
 //    }
     
-    func queryTasks() {
-        
-        let todayStart = Calendar.current.startOfDay(for: Date() as Date)
-        let todayEnd: Date = {
-            var components = DateComponents()
-            components.day = 1
-            components.second = -1
-            return Calendar.current.date(byAdding: components, to: todayStart)!
-        }()
-        
-        let realm = try! Realm()
-        
-        let allTasks = realm.objects(DailyTask)
-        // will also need to add filter so that it includes only appropriate category as well
-        let currentTask = allTasks.filter("createdAt BETWEEN %@", [todayStart, todayEnd])
-        
-        for task in currentTask{
-            dailyTask.append(task.name)
-        
-        tableView.reloadData()
-        }
-        
-    }
+//    func queryTasks() {
+//        
+//        let todayStart = Calendar.current.startOfDay(for: Date() as Date)
+//        let todayEnd: Date = {
+//            var components = DateComponents()
+//            components.day = 1
+//            components.second = -1
+//            return Calendar.current.date(byAdding: components, to: todayStart)!
+//        }()
+//        
+//        let realm = try! Realm()
+//        
+//        let allTasks = realm.objects(DailyTask)
+//        // will also need to add filter so that it includes only appropriate category as well
+//        let currentTask = allTasks.filter("createdAt BETWEEN %@", [todayStart, todayEnd])
+//        
+//        for task in currentTask{
+//            dailyTask.append(task.name)
+//        
+//        tableView.reloadData()
+//        }
+//        
+//    }
     
 }

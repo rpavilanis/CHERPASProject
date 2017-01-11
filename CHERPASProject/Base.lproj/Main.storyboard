@@ -13,36 +13,38 @@
         <scene sceneID="Ch7-nW-fKB">
             <objects>
                 <tableViewController id="uuk-7e-Vz1" customClass="CategoriesViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="67" sectionHeaderHeight="18" sectionFooterHeight="18" id="XAT-T9-YT4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="73" sectionHeaderHeight="18" sectionFooterHeight="18" id="XAT-T9-YT4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" red="1" green="0.80259810379999996" blue="0.4980952199" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HBh-3N-OAU">
-                            <rect key="frame" x="0.0" y="141" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="147" width="375" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Set my Daily Tasks"/>
+                            <state key="normal" title="Set my Daily Tasks">
+                                <color key="titleColor" red="0.1058823529" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
                             <connections>
                                 <segue destination="VA6-Uc-r78" kind="presentation" id="jzi-y2-q4z"/>
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" textLabel="HNr-HH-I5t" detailTextLabel="jCR-4x-rZf" rowHeight="67" style="IBUITableViewCellStyleSubtitle" id="Vjd-6M-VPE" customClass="CategoryTableViewCell" customModule="CHERPASProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="56" width="375" height="67"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" textLabel="HNr-HH-I5t" detailTextLabel="jCR-4x-rZf" rowHeight="73" style="IBUITableViewCellStyleSubtitle" id="Vjd-6M-VPE" customClass="CategoryTableViewCell" customModule="CHERPASProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="56" width="375" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vjd-6M-VPE" id="Tyq-2L-nhI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HNr-HH-I5t">
-                                            <rect key="frame" x="15" y="10" width="37" height="23"/>
+                                            <rect key="frame" x="15" y="13" width="37" height="23"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jCR-4x-rZf">
-                                            <rect key="frame" x="15" y="33" width="64" height="23"/>
+                                            <rect key="frame" x="15" y="36" width="64" height="23"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                             <nil key="textColor"/>
