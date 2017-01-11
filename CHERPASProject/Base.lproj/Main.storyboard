@@ -23,7 +23,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Set my Daily Tasks"/>
                             <connections>
-                                <segue destination="rY5-hq-9JS" kind="presentation" id="jzi-y2-q4z"/>
+                                <segue destination="VA6-Uc-r78" kind="presentation" id="jzi-y2-q4z"/>
                             </connections>
                         </button>
                         <prototypes>
@@ -127,6 +127,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="iTB-bY-lto"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="categoryLetter" destination="v54-VA-mFa" id="kiw-28-W0H"/>
@@ -136,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0c-NZ-uJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1249" y="-763"/>
+            <point key="canvasLocation" x="2188" y="-763.26836581709154"/>
         </scene>
         <!--Tasks View Controller-->
         <scene sceneID="IfD-HJ-KVF">
@@ -186,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XX1-fp-yns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2012" y="-763.26836581709154"/>
+            <point key="canvasLocation" x="2951.1999999999998" y="-763.26836581709154"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Bl-ln-Bbc">
@@ -205,6 +206,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tif-9v-Ywz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-814" y="35"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HR3-X9-vcJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VA6-Uc-r78" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="he5-Gd-tS2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rY5-hq-9JS" kind="relationship" relationship="rootViewController" id="kML-Xb-by0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HsA-TW-rwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1248.8" y="-763.26836581709154"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
