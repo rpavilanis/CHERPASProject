@@ -41,7 +41,8 @@ class CategoriesViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         // need to change this as soon as I can back to categories.count 
-        return dailyTask.count
+//        return dailyTask.count
+        return categories.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -100,13 +101,81 @@ class CategoriesViewController: UITableViewController {
         let currentTask = allTasks.filter("createdAt BETWEEN %@", [todayStart, todayEnd])
         
         for task in currentTask{
-            dailyTask.append(task.name)
-            
-            tableView.reloadData()
+            if task.category == "Cleanliness" {
+                dailyTask.append(task.name)
+            }
         }
         
+        if dailyTask.count == 0 {
+            dailyTask.append("")
+        }
+        
+        for task in currentTask{
+            if task.category == "Healthy Living" {
+                dailyTask.append(task.name)
+            }
+        }
+        
+        if dailyTask.count == 1 {
+            dailyTask.append("")
+        }
+        
+        for task in currentTask{
+            if task.category == "Exercise" {
+                dailyTask.append(task.name)
+            }
+        }
+        
+        if dailyTask.count == 2 {
+            dailyTask.append("")
+        }
+        
+        
+        for task in currentTask{
+            if task.category == "Relationships" {
+                dailyTask.append(task.name)
+            }
+        }
+        
+        if dailyTask.count == 3 {
+            dailyTask.append("")
+        }
+        
+        for task in currentTask{
+            if task.category == "Personal Development" {
+                dailyTask.append(task.name)
+            }
+        }
+        
+        if dailyTask.count == 4 {
+            dailyTask.append("")
+        }
+        
+        for task in currentTask{
+            if task.category == "Action-Based Living" {
+                dailyTask.append(task.name)
+            }
+        }
+        
+        if dailyTask.count == 5 {
+            dailyTask.append("")
+        }
+        
+        for task in currentTask{
+            if task.category == "Spirituality" {
+                dailyTask.append(task.name)
+            }
+        }
+        
+        if dailyTask.count == 6 {
+            dailyTask.append("")
+        }
+        
+         tableView.reloadData()
+        // tableView.reloadData()
+        
+        // dailyTask includes all of the tasks for the current day, but they are not necessarily ordered by category the way I need them to be.
+        
+        
     }
-
-    
-
 }
