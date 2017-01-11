@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC5946BB1E26F2C10019ED32 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5946B61E26F2B60019ED32 /* Charts.framework */; };
+		CC5946BC1E26F2C10019ED32 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC5946B61E26F2B60019ED32 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC5946BF1E26F2C10019ED32 /* ChartsRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5946B81E26F2B60019ED32 /* ChartsRealm.framework */; };
+		CC5946C01E26F2C10019ED32 /* ChartsRealm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC5946B81E26F2B60019ED32 /* ChartsRealm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC7DF91F1E2056790079A53E /* DayOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DF91E1E2056790079A53E /* DayOverviewTableViewCell.swift */; };
 		CCA756281E1D8F4F00A8D4FB /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */; };
 		CCA7562A1E1ECD5100A8D4FB /* SetDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA756291E1ECD5100A8D4FB /* SetDailyViewController.swift */; };
@@ -27,6 +31,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CC5946B51E26F2B60019ED32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC5946AF1E26F2B60019ED32 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		CC5946B71E26F2B60019ED32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC5946AF1E26F2B60019ED32 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06B120D51D811E6200D14B02;
+			remoteInfo = ChartsRealm;
+		};
+		CC5946B91E26F2B60019ED32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC5946AF1E26F2B60019ED32 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
+		CC5946BD1E26F2C10019ED32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC5946AF1E26F2B60019ED32 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
+		CC5946C11E26F2C10019ED32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC5946AF1E26F2B60019ED32 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06B120D41D811E6200D14B02;
+			remoteInfo = ChartsRealm;
+		};
 		CCA9666E1E1C64EA00C551D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CCA966511E1C64EA00C551D1 /* Project object */;
@@ -50,8 +89,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CC5946BC1E26F2C10019ED32 /* Charts.framework in Embed Frameworks */,
 				CCA9668F1E1C65BC00C551D1 /* RealmSwift.framework in Embed Frameworks */,
 				CCA9668D1E1C65BC00C551D1 /* Realm.framework in Embed Frameworks */,
+				CC5946C01E26F2C10019ED32 /* ChartsRealm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +100,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC5946AF1E26F2B60019ED32 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../Charts-3.0.1/Charts.xcodeproj"; sourceTree = "<group>"; };
 		CC7DF91E1E2056790079A53E /* DayOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		CCA756291E1ECD5100A8D4FB /* SetDailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetDailyViewController.swift; sourceTree = "<group>"; };
@@ -88,8 +130,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5946BB1E26F2C10019ED32 /* Charts.framework in Frameworks */,
 				CCA9668E1E1C65BC00C551D1 /* RealmSwift.framework in Frameworks */,
 				CCA9668C1E1C65BC00C551D1 /* Realm.framework in Frameworks */,
+				CC5946BF1E26F2C10019ED32 /* ChartsRealm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,9 +154,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC5946B01E26F2B60019ED32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC5946B61E26F2B60019ED32 /* Charts.framework */,
+				CC5946B81E26F2B60019ED32 /* ChartsRealm.framework */,
+				CC5946BA1E26F2B60019ED32 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CCA966501E1C64EA00C551D1 = {
 			isa = PBXGroup;
 			children = (
+				CC5946AF1E26F2B60019ED32 /* Charts.xcodeproj */,
 				CCA9668A1E1C65BC00C551D1 /* Realm.framework */,
 				CCA9668B1E1C65BC00C551D1 /* RealmSwift.framework */,
 				CCA9665B1E1C64EA00C551D1 /* CHERPASProject */,
@@ -193,6 +248,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				CC5946BE1E26F2C10019ED32 /* PBXTargetDependency */,
+				CC5946C21E26F2C10019ED32 /* PBXTargetDependency */,
 			);
 			name = CHERPASProject;
 			productName = CHERPASProject;
@@ -280,6 +337,12 @@
 			mainGroup = CCA966501E1C64EA00C551D1;
 			productRefGroup = CCA9665A1E1C64EA00C551D1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CC5946B01E26F2B60019ED32 /* Products */;
+					ProjectRef = CC5946AF1E26F2B60019ED32 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CCA966581E1C64EA00C551D1 /* CHERPASProject */,
@@ -288,6 +351,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CC5946B61E26F2B60019ED32 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = CC5946B51E26F2B60019ED32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CC5946B81E26F2B60019ED32 /* ChartsRealm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChartsRealm.framework;
+			remoteRef = CC5946B71E26F2B60019ED32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CC5946BA1E26F2B60019ED32 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = CC5946B91E26F2B60019ED32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CCA966571E1C64EA00C551D1 /* Resources */ = {
@@ -351,6 +438,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CC5946BE1E26F2C10019ED32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = CC5946BD1E26F2C10019ED32 /* PBXContainerItemProxy */;
+		};
+		CC5946C21E26F2C10019ED32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ChartsRealm;
+			targetProxy = CC5946C11E26F2C10019ED32 /* PBXContainerItemProxy */;
+		};
 		CCA9666F1E1C64EA00C551D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CCA966581E1C64EA00C551D1 /* CHERPASProject */;
@@ -477,6 +574,7 @@
 		CCA966821E1C64EA00C551D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CHERPASProject/CHERPASProject.entitlements;
 				DEVELOPMENT_TEAM = 6HJ9DKF5YK;
@@ -495,6 +593,7 @@
 		CCA966831E1C64EA00C551D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CHERPASProject/CHERPASProject.entitlements;
 				DEVELOPMENT_TEAM = 6HJ9DKF5YK;

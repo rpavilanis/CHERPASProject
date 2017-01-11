@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Charts 
 
 let uiRealm = try! Realm()
 
