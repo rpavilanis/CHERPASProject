@@ -21,11 +21,6 @@ class TasksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         TaskLabel.text = "Add Daily Task for " + passedCategory
-
-        // Do any additional setup after loading the view - load data and redisplay
-        
-//         TaskInput.text = "current daily task" // eventually have an if statement that references only current daily task
-        
     }
 
    

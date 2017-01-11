@@ -13,7 +13,6 @@ class CategoriesViewController: UITableViewController {
     
     var categories = ["Cleanliness", "Healthy Eating", "Exercise", "Relationships", "Personal Development", "Action-Based Living", "Spirituality"]
     
-//    var dailyTasks = ["Clean bathroom", "Eat 3 servings of veggies", "Week 3, Day 1 of C25K", "Call Lila", "Read 30 minutes", "Do January budget", "Meditate 20 minutes - Headspace"]
     var dailyTask = [String]()
     
     var monthlyGoals = ["Clean for 15 minutes each day.", "H Goal", "E Goal", "R Goal", "P Goal", "A Goal",
@@ -32,16 +31,7 @@ class CategoriesViewController: UITableViewController {
         
     }
 
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        // need to change this as soon as I can back to categories.count 
-//        return dailyTask.count
         return categories.count
     }
     
@@ -49,15 +39,11 @@ class CategoriesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryTableViewCell
         
         let categoryName = categories[indexPath.row]
-        // this code works - but not enough space to include name and task detail - just want to display task
-//        cell.textLabel?.text = categoryName
-       
-        cell.detailTextLabel?.text = dailyTask[indexPath.row]
-        
-        
-        cell.detailTextLabel?.textColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
         cell.textLabel?.text = categories[indexPath.row]
         cell.imageView?.image = UIImage(named: categoryName)
+       
+        cell.detailTextLabel?.text = dailyTask[indexPath.row]
+        cell.detailTextLabel?.textColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
         
         return cell
     }
@@ -66,6 +52,7 @@ class CategoriesViewController: UITableViewController {
         if segue.identifier == "dayOverview" {
             let dayOverview = segue.destination as! DayOverviewViewController
             if let indexpath = self.tableView.indexPathForSelectedRow {
+                
                 let taskItem = dailyTask[indexpath.row] as String
                 dayOverview.sentData1 = taskItem
                 
@@ -111,7 +98,7 @@ class CategoriesViewController: UITableViewController {
         }
         
         for task in currentTask{
-            if task.category == "Healthy Living" {
+            if task.category == "Healthy Eating" {
                 dailyTask.append(task.name)
             }
         }
@@ -172,10 +159,6 @@ class CategoriesViewController: UITableViewController {
         }
         
          tableView.reloadData()
-        // tableView.reloadData()
-        
-        // dailyTask includes all of the tasks for the current day, but they are not necessarily ordered by category the way I need them to be.
-        
         
     }
 }
