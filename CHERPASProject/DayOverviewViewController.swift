@@ -90,6 +90,16 @@ class DayOverviewViewController: UITableViewController {
 ////        cell.textLabel?.textColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
 //
 //        return cell
+//        let realm = try! Realm()
+//        let selectedTask = realm.objects(DailyTask)[indexPath.row]
+//
+//        if selectedTask.isCompleted == true {
+//            let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData1)
+//            attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+////            let cell = tableView.cellForRow(at: indexPath)
+//            cell.textLabel?.attributedText =  attributeString
+//        }
+        
         switch (indexPath.section)
         {
         case 0:
@@ -122,9 +132,9 @@ class DayOverviewViewController: UITableViewController {
             let selectedTask = realm.objects(DailyTask)[indexPath.row]
             try! realm.write {
                 realm.delete(selectedTask)
+                let paths = [indexPath]
+                tableView.reloadRows(at: paths, with: UITableViewRowAnimation.none)
             }
-            let paths = [indexPath]
-            self.tableView.reloadRows(at: paths, with: UITableViewRowAnimation.none)
         }
         delete.backgroundColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
 
@@ -136,30 +146,21 @@ class DayOverviewViewController: UITableViewController {
         // need to adjust this with if statement once add in model - if task is complete already, need to be able to change to incomplete
         let markComplete = UITableViewRowAction(style: .normal, title: "Complete") { action, index in
             print(indexPath)
-//            let todayStart = Calendar.current.startOfDay(for: Date() as Date)
-//            let todayEnd: Date = {
-//                var components = DateComponents()
-//                components.day = 1
-//                components.second = -1
-//                return Calendar.current.date(byAdding: components, to: todayStart)!
-//            }()
-//            let realm = try! Realm()
-//            let allTasks = realm.objects(DailyTask)
-//            let currentTask = allTasks.filter("createdAt BETWEEN %@", [todayStart, todayEnd])
-//            //            currently this works to delete targeted object, HOWEVER - then my array shifts and things move around.
-//            try! realm.write {
-//                let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: message)
-//                attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
-//    
-//                cell.textLabel?.attributedText =  attributeString
-//            }
-//
             
-            
-
+            let realm = try! Realm()
+            let selectedTask = realm.objects(DailyTask)[indexPath.row]
+            try! realm.write {
+                print(selectedTask.isCompleted)
+                selectedTask.isCompleted = true
+            }
+            if selectedTask.isCompleted == true {
+                let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData1)
+                attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+                let cell = tableView.cellForRow(at: indexPath)
+                cell?.textLabel?.attributedText =  attributeString
+            }
             //remove strikethrough
             // cell.textLabel?.attributedText =  nil
-            
         }
         markComplete.backgroundColor = UIColor(red: 0/255, green: 66/255, blue: 89/255, alpha: 1.0)
         return [edit, delete, markComplete]
