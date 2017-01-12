@@ -16,6 +16,10 @@ class SetDailyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        // doesn't work to change the color...grrr
+//        self.navigationController?.navigationBar.tintColor = UIColor.blue
+//        self.navigationController?.navigationBar.isTranslucent = false
+        
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(SetDailyViewController.swipeGesture(sender:)))
         swipeLeft.direction = UISwipeGestureRecognizerDirection.left
         self.view.addGestureRecognizer(swipeLeft)
