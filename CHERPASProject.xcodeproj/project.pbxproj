@@ -12,6 +12,9 @@
 		CC5946BF1E26F2C10019ED32 /* ChartsRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5946B81E26F2B60019ED32 /* ChartsRealm.framework */; };
 		CC5946C01E26F2C10019ED32 /* ChartsRealm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC5946B81E26F2B60019ED32 /* ChartsRealm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC5946CB1E2714380019ED32 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5946CA1E2714380019ED32 /* ChartViewController.swift */; };
+		CC5946D01E2817710019ED32 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5946CF1E2817710019ED32 /* SWRevealViewController.m */; };
+		CC5946D21E2821710019ED32 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5946D11E2821710019ED32 /* MenuViewController.swift */; };
+		CC5946D41E28218C0019ED32 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5946D31E28218C0019ED32 /* MenuTableViewCell.swift */; };
 		CC7DF91F1E2056790079A53E /* DayOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DF91E1E2056790079A53E /* DayOverviewTableViewCell.swift */; };
 		CCA756281E1D8F4F00A8D4FB /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */; };
 		CCA7562A1E1ECD5100A8D4FB /* SetDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA756291E1ECD5100A8D4FB /* SetDailyViewController.swift */; };
@@ -103,6 +106,11 @@
 /* Begin PBXFileReference section */
 		CC5946AF1E26F2B60019ED32 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../Charts-3.0.1/Charts.xcodeproj"; sourceTree = "<group>"; };
 		CC5946CA1E2714380019ED32 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		CC5946CD1E2817700019ED32 /* CHERPASProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CHERPASProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC5946CE1E2817710019ED32 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		CC5946CF1E2817710019ED32 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		CC5946D11E2821710019ED32 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		CC5946D31E28218C0019ED32 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		CC7DF91E1E2056790079A53E /* DayOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		CCA756291E1ECD5100A8D4FB /* SetDailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetDailyViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +177,8 @@
 		CCA966501E1C64EA00C551D1 = {
 			isa = PBXGroup;
 			children = (
+				CC5946CE1E2817710019ED32 /* SWRevealViewController.h */,
+				CC5946CF1E2817710019ED32 /* SWRevealViewController.m */,
 				CC5946AF1E26F2B60019ED32 /* Charts.xcodeproj */,
 				CCA9668A1E1C65BC00C551D1 /* Realm.framework */,
 				CCA9668B1E1C65BC00C551D1 /* RealmSwift.framework */,
@@ -176,6 +186,7 @@
 				CCA966701E1C64EA00C551D1 /* CHERPASProjectTests */,
 				CCA9667B1E1C64EA00C551D1 /* CHERPASProjectUITests */,
 				CCA9665A1E1C64EA00C551D1 /* Products */,
+				CC5946CD1E2817700019ED32 /* CHERPASProject-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,6 +207,8 @@
 				CCA966911E1C660200C551D1 /* CHERPASProject.entitlements */,
 				CCA9665C1E1C64EA00C551D1 /* AppDelegate.swift */,
 				CCA966601E1C64EA00C551D1 /* Main.storyboard */,
+				CC5946D11E2821710019ED32 /* MenuViewController.swift */,
+				CC5946D31E28218C0019ED32 /* MenuTableViewCell.swift */,
 				CCA966631E1C64EA00C551D1 /* Assets.xcassets */,
 				CCA966651E1C64EA00C551D1 /* LaunchScreen.storyboard */,
 				CCA966681E1C64EA00C551D1 /* Info.plist */,
@@ -308,6 +321,7 @@
 					CCA966581E1C64EA00C551D1 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 6HJ9DKF5YK;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -413,11 +427,14 @@
 			files = (
 				CCA7562C1E1ED9BF00A8D4FB /* DayOverviewViewController.swift in Sources */,
 				CC7DF91F1E2056790079A53E /* DayOverviewTableViewCell.swift in Sources */,
+				CC5946D41E28218C0019ED32 /* MenuTableViewCell.swift in Sources */,
 				CCA966941E1C685800C551D1 /* Task.swift in Sources */,
 				CCA7562A1E1ECD5100A8D4FB /* SetDailyViewController.swift in Sources */,
+				CC5946D21E2821710019ED32 /* MenuViewController.swift in Sources */,
 				CCA756281E1D8F4F00A8D4FB /* TasksViewController.swift in Sources */,
 				CC5946CB1E2714380019ED32 /* ChartViewController.swift in Sources */,
 				CCA7562E1E1EE94800A8D4FB /* CategoryTableViewCell.swift in Sources */,
+				CC5946D01E2817710019ED32 /* SWRevealViewController.m in Sources */,
 				CCA9665D1E1C64EA00C551D1 /* AppDelegate.swift in Sources */,
 				CCA966981E1C951800C551D1 /* CategoriesViewController.swift in Sources */,
 			);
@@ -580,6 +597,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CHERPASProject/CHERPASProject.entitlements;
 				DEVELOPMENT_TEAM = 6HJ9DKF5YK;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -590,6 +608,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rachelpavilanis.CHERPASProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CHERPASProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -599,6 +619,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CHERPASProject/CHERPASProject.entitlements;
 				DEVELOPMENT_TEAM = 6HJ9DKF5YK;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -609,6 +630,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rachelpavilanis.CHERPASProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CHERPASProject-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

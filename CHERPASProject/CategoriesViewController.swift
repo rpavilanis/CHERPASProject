@@ -11,6 +11,8 @@ import RealmSwift
 
 class CategoriesViewController: UITableViewController {
     
+    @IBOutlet weak var btnMenuButton: UIBarButtonItem!
+    
     var categories = ["Cleanliness", "Healthy Eating", "Exercise", "Relationships", "Personal Development", "Action-Based Living", "Spirituality"]
     
     var dailyTask = [String]()
@@ -26,6 +28,8 @@ class CategoriesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         queryTasks()
+        btnMenuButton.target = revealViewController()
+        btnMenuButton.action = #selector(SWRevealViewController.revealToggle(_:))
         // This removes the label on the back bar - remove this if I want to add label back in for this.
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
