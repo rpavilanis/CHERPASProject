@@ -14,15 +14,24 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     var iconImage: Array = [UIImage]()
     
 
+    @IBOutlet weak var imgProfile: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         menuNameArr = ["Home", "Set CHERPAS", "Month in Review"]
         iconImage = [UIImage(named: "home")!, UIImage(named: "CHERPAS")!, UIImage(named: "data")!]
+        
+        imgProfile.layer.borderColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0).cgColor
+        
+        imgProfile.layer.borderWidth = 2
+        imgProfile.layer.cornerRadius = 50
+        imgProfile.layer.masksToBounds = false
+        imgProfile.clipsToBounds = true
+        
 
         // Do any additional setup after loading the view.
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuNameArr.count

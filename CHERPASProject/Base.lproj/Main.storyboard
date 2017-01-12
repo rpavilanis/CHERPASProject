@@ -137,7 +137,7 @@
         <!--Chart View Controller-->
         <scene sceneID="y8w-Pf-AZa">
             <objects>
-                <viewController id="2VP-J7-EDU" customClass="ChartViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2VP-J7-EDU" customClass="ChartViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VKZ-f0-6OV"/>
                         <viewControllerLayoutGuide type="bottom" id="eb3-cp-y9E"/>
@@ -160,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2k-Me-c2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2191.1999999999998" y="30.134932533733135"/>
+            <point key="canvasLocation" x="-922" y="853"/>
         </scene>
         <!--Set Daily View Controller-->
         <scene sceneID="CJT-Te-Kq0">
@@ -259,15 +259,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DdA-eV-FO8">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DdA-eV-FO8">
+                                <rect key="frame" x="0.0" y="209" width="375" height="458"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuTableViewCell" rowHeight="54" id="hda-4r-Enc" customClass="MenuTableViewCell" customModule="CHERPASProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hda-4r-Enc" id="r8d-HS-AML">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BpL-3Y-Fau">
@@ -306,19 +306,31 @@
                                     <outlet property="delegate" destination="g4l-lc-xSe" id="OQ0-vX-eWO"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="zmz-5G-4CK">
+                                <rect key="frame" x="16" y="28" width="167" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="3iL-CI-gCp"/>
+                                    <constraint firstAttribute="width" constant="167" id="4SI-sM-T1B"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DdA-eV-FO8" firstAttribute="top" secondItem="bhf-XV-kNa" secondAttribute="bottom" id="TkZ-UT-K5J"/>
+                            <constraint firstItem="DdA-eV-FO8" firstAttribute="top" secondItem="zmz-5G-4CK" secondAttribute="bottom" constant="36" id="aXS-rX-Qp2"/>
                             <constraint firstItem="DdA-eV-FO8" firstAttribute="leading" secondItem="uoj-HF-HG6" secondAttribute="leading" id="ibi-eI-Lgv"/>
                             <constraint firstItem="hrt-HR-IYo" firstAttribute="top" secondItem="DdA-eV-FO8" secondAttribute="bottom" id="lUC-vk-Mdi"/>
+                            <constraint firstItem="zmz-5G-4CK" firstAttribute="leading" secondItem="uoj-HF-HG6" secondAttribute="leadingMargin" id="v7v-cS-gjw"/>
+                            <constraint firstItem="zmz-5G-4CK" firstAttribute="top" secondItem="bhf-XV-kNa" secondAttribute="bottom" constant="8" id="voN-3Q-JeO"/>
                             <constraint firstAttribute="trailing" secondItem="DdA-eV-FO8" secondAttribute="trailing" id="wW2-Pv-hJ8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgProfile" destination="zmz-5G-4CK" id="dw7-Hb-MR1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVs-V4-CvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-919.20000000000005" y="-628.33583208395805"/>
+            <point key="canvasLocation" x="-922.39999999999998" y="-590.55472263868069"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Bl-ln-Bbc">
@@ -332,11 +344,12 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="uuk-7e-Vz1" kind="relationship" relationship="rootViewController" id="cXZ-aM-VaW"/>
+                        <segue destination="2VP-J7-EDU" kind="show" id="f62-u5-9fB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tif-9v-Ywz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-905" y="35"/>
+            <point key="canvasLocation" x="-922" y="92"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HR3-X9-vcJ">
@@ -359,8 +372,9 @@
     </scenes>
     <resources>
         <image name="Menu-50 (1)" width="25" height="25"/>
+        <image name="profile" width="960" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hmC-vZ-LOc"/>
+        <segue reference="cXZ-aM-VaW"/>
     </inferredMetricsTieBreakers>
 </document>
