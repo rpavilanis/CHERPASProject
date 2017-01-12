@@ -10,6 +10,7 @@ import UIKit
 import Charts
 import RealmSwift
 
+
 class ChartViewController: UIViewController {
     
     @IBOutlet weak var setChart: BarChartView!
@@ -17,22 +18,26 @@ class ChartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        let percentComplete = [10, 70, 25, 60, 67, 50, 60, 70, 80, 90, 100]
+//        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        let category = [1, 2, 3, 4, 5, 6, 7]
+        let percentComplete = [10, 70, 25, 60, 100, 50, 60]
         
-        makeChart(dataPoints: months, values: percentComplete)
+        makeChart(dataPoints: category, values: percentComplete)
         //        updateChartWithData()
         // Do any additional setup after loading the view.
     }
     
  
-    func makeChart(dataPoints: [String], values: [Int]) {
+    func makeChart(dataPoints: [Int], values: [Int]) {
         setChart.noDataText = "You don't yet have enough data to produce your weekly chart."
+        
+//        self.setChart.xAxis.labelCount = self.months.count
+//        self.setChart.xAxis.valueFormatter = DefaultAxisValueFormatter { (value, axis) -> String in return self.months[Int(value)] }
         
         var dataEntries: [BarChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
-            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(dataPoints[i].count))
+            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(values[i]))
             dataEntries.append(dataEntry)
         }
         
