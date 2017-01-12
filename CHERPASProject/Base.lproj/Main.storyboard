@@ -106,6 +106,34 @@
             </objects>
             <point key="canvasLocation" x="1249" y="35"/>
         </scene>
+        <!--Chart View Controller-->
+        <scene sceneID="y8w-Pf-AZa">
+            <objects>
+                <viewController id="2VP-J7-EDU" customClass="ChartViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VKZ-f0-6OV"/>
+                        <viewControllerLayoutGuide type="bottom" id="eb3-cp-y9E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o4h-qp-oac">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="taH-pn-VYc" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="128" width="343" height="539"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="setChart" destination="taH-pn-VYc" id="0PS-iH-FCp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2k-Me-c2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2191.1999999999998" y="30.134932533733135"/>
+        </scene>
         <!--Set Daily View Controller-->
         <scene sceneID="CJT-Te-Kq0">
             <objects>
