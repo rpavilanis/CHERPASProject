@@ -19,8 +19,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        menuNameArr = ["Home", "Set CHERPAS", "Month in Review"]
-        iconImage = [UIImage(named: "home")!, UIImage(named: "CHERPAS")!, UIImage(named: "data")!]
+        menuNameArr = ["Home", "Set CHERPAS", "Week in Review", "Notifications"]
+        iconImage = [UIImage(named: "home")!, UIImage(named: "CHERPAS")!, UIImage(named: "data")!, UIImage(named: "notifications")!]
         
         imgProfile.layer.borderColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0).cgColor
         
@@ -69,13 +69,21 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
 
         
-        if cell.lblMenuName.text! == "Month in Review" {
+        if cell.lblMenuName.text! == "Week in Review" {
             let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let desController = mainStoryboard.instantiateViewController(withIdentifier: "ChartViewController") as! ChartViewController
             let newFrontViewController = UINavigationController.init(rootViewController:desController)
             
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         }
+        
+        if cell.lblMenuName.text! == "Notifications" {
+            let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let desController = mainStoryboard.instantiateViewController(withIdentifier: "DailyCHERPASNotificationsViewController") as! DailyCHERPASNotificationsViewController
+            let newFrontViewController = UINavigationController.init(rootViewController:desController)
+            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+        }
+
 
 
     }

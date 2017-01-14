@@ -54,6 +54,20 @@ class ChartViewController: UIViewController {
         let chartData = BarChartData(dataSet: chartDataSet)
         //outlet from view 
         setChart.data = chartData
+        
+        setChart.descriptionText = ""
+        setChart.xAxis.labelPosition = .bottom
+        chartDataSet.colors = [UIColor(red: 255/255, green: 205/255, blue: 127/255, alpha: 1)]
+        setChart.animate(yAxisDuration: 1.5, easingOption: .easeInOutQuart)
+//        setChart.legend.colors = [UIColor(red: 255/255, green: 205/255, blue: 127/255, alpha: 1)]
+        setChart.legend.enabled = false
+        setChart.leftAxis.axisMaximum = 100
+        setChart.leftAxis.axisMinimum = 0
+        setChart.rightAxis.enabled = false
+        setChart.leftAxis.axisMinValue = 0
+        setChart.leftAxis.axisMaxValue = 100
+        setChart.xAxis.drawGridLinesEnabled = false
+        
     }
     
     // will need a function to query data for past 7 days and sort by category - putting each into a variable so I can display it within graph 
@@ -75,8 +89,8 @@ class ChartViewController: UIViewController {
         
         let allTasks = realm.objects(DailyTask)
         print(allTasks)
-        let monthlyTasks = allTasks.filter("createdAt BETWEEN %@", [weekStart, weekEnd])
-        print(monthlyTasks)
+        let weeklyTasks = allTasks.filter("createdAt BETWEEN %@", [weekStart, weekEnd])
+        print(weeklyTasks)
 //        var cIsC = 0
 //        var cTotal = 0
         var hIsC = Double()
@@ -93,7 +107,7 @@ class ChartViewController: UIViewController {
 //        var sTotal = 0
         
         
-        for task in monthlyTasks{
+        for task in weeklyTasks{
 //            if task.category == "Cleanliness" {
 //                // assign 1 to isCompleted is true and 0 if false.  then take the total number of items in category, and divide total of trues by it to get percent complete.
 //                // within loop: add one to is completed and add 1 to total, then after loop, do calculations and assign to variables - then push values into array that I will use in project

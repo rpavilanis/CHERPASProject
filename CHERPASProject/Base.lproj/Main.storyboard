@@ -147,10 +147,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="taH-pn-VYc" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="128" width="343" height="539"/>
+                                <rect key="frame" x="16" y="146" width="343" height="513"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Percentage of Tasks Completed by Category - Weekly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etd-qK-Crk">
+                                <rect key="frame" x="16" y="86" width="343" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -160,7 +167,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2k-Me-c2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-922" y="853"/>
+            <point key="canvasLocation" x="-922.39999999999998" y="852.3238380809596"/>
+        </scene>
+        <!--DailyCHERPAS Notifications View Controller-->
+        <scene sceneID="SMn-69-P4D">
+            <objects>
+                <viewController storyboardIdentifier="DailyCHERPASNotificationsViewController" id="iGS-lA-OKo" customClass="DailyCHERPASNotificationsViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tne-eD-YMI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jhm-v2-wAf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nvi-yS-L92">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oU3-6n-zLi">
+                                <rect key="frame" x="0.0" y="304" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="506038052.50280499">
+                                    <!--2017-01-13 22:07:32 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerDidSelectNewDate:" destination="iGS-lA-OKo" eventType="valueChanged" id="Ti8-ig-b2h"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We will remind you to check-in and set your daily CHERPAS at:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j94-Sh-yZ3">
+                                <rect key="frame" x="16" y="225" width="343" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remind Me to Set Daily CHERPAS!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS1-tC-gJa">
+                                <rect key="frame" x="56" y="139" width="263" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nSa-FU-Q9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50.399999999999999" y="856.82158920539734"/>
         </scene>
         <!--Set Daily View Controller-->
         <scene sceneID="CJT-Te-Kq0">
@@ -345,6 +396,7 @@
                     <connections>
                         <segue destination="uuk-7e-Vz1" kind="relationship" relationship="rootViewController" id="cXZ-aM-VaW"/>
                         <segue destination="2VP-J7-EDU" kind="show" id="f62-u5-9fB"/>
+                        <segue destination="iGS-lA-OKo" kind="show" id="uX7-D1-ZwF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tif-9v-Ywz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -375,6 +427,6 @@
         <image name="profile" width="960" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hmC-vZ-LOc"/>
+        <segue reference="cXZ-aM-VaW"/>
     </inferredMetricsTieBreakers>
 </document>
