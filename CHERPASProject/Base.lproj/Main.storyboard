@@ -213,6 +213,50 @@
             </objects>
             <point key="canvasLocation" x="-50.399999999999999" y="856.82158920539734"/>
         </scene>
+        <!--End DailyCHERPAS Notifications View Controller-->
+        <scene sceneID="QUA-7z-Iw1">
+            <objects>
+                <viewController storyboardIdentifier="EndDailyCHERPASNotificationsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ige-zs-Awl" customClass="EndDailyCHERPASNotificationsViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UfA-Jc-9do"/>
+                        <viewControllerLayoutGuide type="bottom" id="PkM-HC-jtP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uAq-31-qqz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hOW-RR-qyl">
+                                <rect key="frame" x="0.0" y="297" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="506052234.95338398">
+                                    <!--2017-01-14 02:03:54 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="dateEndPickerDidSelectNewDate:" destination="ige-zs-Awl" eventType="valueChanged" id="RAe-55-qxr"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remind Me to Review Daily CHERPAS!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqP-nL-G1n">
+                                <rect key="frame" x="56" y="126" width="263" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We will remind you to review and mark your daily CHERPAS as complete at:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7e-Vq-xqr">
+                                <rect key="frame" x="16" y="206" width="343" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Imd-kX-sv4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="864"/>
+        </scene>
         <!--Set Daily View Controller-->
         <scene sceneID="CJT-Te-Kq0">
             <objects>
@@ -397,6 +441,7 @@
                         <segue destination="uuk-7e-Vz1" kind="relationship" relationship="rootViewController" id="cXZ-aM-VaW"/>
                         <segue destination="2VP-J7-EDU" kind="show" id="f62-u5-9fB"/>
                         <segue destination="iGS-lA-OKo" kind="show" id="uX7-D1-ZwF"/>
+                        <segue destination="ige-zs-Awl" kind="show" id="8Nu-AS-jc7"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tif-9v-Ywz" userLabel="First Responder" sceneMemberID="firstResponder"/>

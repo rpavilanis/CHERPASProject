@@ -16,6 +16,7 @@
 		CC5946D21E2821710019ED32 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5946D11E2821710019ED32 /* MenuViewController.swift */; };
 		CC5946D41E28218C0019ED32 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5946D31E28218C0019ED32 /* MenuTableViewCell.swift */; };
 		CC5946D61E29884A0019ED32 /* DailyCHERPASNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5946D51E29884A0019ED32 /* DailyCHERPASNotificationsViewController.swift */; };
+		CC5946D81E29BF980019ED32 /* EndDailyCHERPASNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5946D71E29BF980019ED32 /* EndDailyCHERPASNotificationsViewController.swift */; };
 		CC7DF91F1E2056790079A53E /* DayOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DF91E1E2056790079A53E /* DayOverviewTableViewCell.swift */; };
 		CCA756281E1D8F4F00A8D4FB /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */; };
 		CCA7562A1E1ECD5100A8D4FB /* SetDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA756291E1ECD5100A8D4FB /* SetDailyViewController.swift */; };
@@ -113,6 +114,7 @@
 		CC5946D11E2821710019ED32 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		CC5946D31E28218C0019ED32 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		CC5946D51E29884A0019ED32 /* DailyCHERPASNotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyCHERPASNotificationsViewController.swift; sourceTree = "<group>"; };
+		CC5946D71E29BF980019ED32 /* EndDailyCHERPASNotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndDailyCHERPASNotificationsViewController.swift; sourceTree = "<group>"; };
 		CC7DF91E1E2056790079A53E /* DayOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		CCA756291E1ECD5100A8D4FB /* SetDailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetDailyViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				CCA9665C1E1C64EA00C551D1 /* AppDelegate.swift */,
 				CCA966601E1C64EA00C551D1 /* Main.storyboard */,
 				CC5946D51E29884A0019ED32 /* DailyCHERPASNotificationsViewController.swift */,
+				CC5946D71E29BF980019ED32 /* EndDailyCHERPASNotificationsViewController.swift */,
 				CC5946D11E2821710019ED32 /* MenuViewController.swift */,
 				CC5946D31E28218C0019ED32 /* MenuTableViewCell.swift */,
 				CCA966631E1C64EA00C551D1 /* Assets.xcassets */,
@@ -434,6 +437,7 @@
 				CC5946D41E28218C0019ED32 /* MenuTableViewCell.swift in Sources */,
 				CCA966941E1C685800C551D1 /* Task.swift in Sources */,
 				CCA7562A1E1ECD5100A8D4FB /* SetDailyViewController.swift in Sources */,
+				CC5946D81E29BF980019ED32 /* EndDailyCHERPASNotificationsViewController.swift in Sources */,
 				CC5946D21E2821710019ED32 /* MenuViewController.swift in Sources */,
 				CCA756281E1D8F4F00A8D4FB /* TasksViewController.swift in Sources */,
 				CC5946CB1E2714380019ED32 /* ChartViewController.swift in Sources */,

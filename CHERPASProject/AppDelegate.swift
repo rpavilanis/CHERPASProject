@@ -62,8 +62,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         let action = UNNotificationAction(identifier: "remindLater", title: "Remind me later", options: [])
+        // check-in notification
         let category = UNNotificationCategory(identifier: "myCategory", actions: [action], intentIdentifiers: [], options: [])
         UNUserNotificationCenter.current().setNotificationCategories([category])
+        // check-out notification
+        let endCategory = UNNotificationCategory(identifier: "endCategory", actions: [action], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([endCategory])
         
         return true
     }
@@ -80,10 +84,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         content.sound = UNNotificationSound.default()
         content.categoryIdentifier = "myCategory"
         
+        let content2 = UNMutableNotificationContent()
+        content2.title = "CHERPAS Reminder"
+        content2.body = "Just a reminder to review your daily CHERPAS tasks and mark tasks as complete."
+        content2.sound = UNNotificationSound.default()
+        content2.categoryIdentifier = "endCategory"
+
+        
         let request = UNNotificationRequest(identifier: "textNotification", content: content, trigger: trigger)
         UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         UNUserNotificationCenter.current().add(request) {(error) in
+            if let error = error {
+                print("Uh oh! We had an error: \(error)")
+            }
+        }
+        
+        let request2 = UNNotificationRequest(identifier: "textNotification", content: content2, trigger: trigger)
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().add(request2) {(error) in
             if let error = error {
                 print("Uh oh! We had an error: \(error)")
             }
