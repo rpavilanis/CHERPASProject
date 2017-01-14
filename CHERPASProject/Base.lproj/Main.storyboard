@@ -134,6 +134,41 @@
             </objects>
             <point key="canvasLocation" x="1249" y="35"/>
         </scene>
+        <!--Monthly Chart View Controller-->
+        <scene sceneID="pdd-tw-e7N">
+            <objects>
+                <viewController storyboardIdentifier="MonthlyChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FDH-5h-vhC" customClass="MonthlyChartViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WDL-gu-fsY"/>
+                        <viewControllerLayoutGuide type="bottom" id="mNw-1D-b3q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EJi-q0-Fus">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Percentage of Tasks Completed by Category - Monthly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vG7-vb-T3F">
+                                <rect key="frame" x="16" y="85" width="343" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v3D-y2-Rhm" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="145" width="343" height="513"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="setMonthlyChart" destination="v3D-y2-Rhm" id="7YR-v6-kNv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVe-Y6-yMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1271.2" y="856.82158920539734"/>
+        </scene>
         <!--Chart View Controller-->
         <scene sceneID="y8w-Pf-AZa">
             <objects>
@@ -167,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2k-Me-c2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-922.39999999999998" y="852.3238380809596"/>
+            <point key="canvasLocation" x="-2212" y="857"/>
         </scene>
         <!--DailyCHERPAS Notifications View Controller-->
         <scene sceneID="SMn-69-P4D">
@@ -442,6 +477,7 @@
                         <segue destination="2VP-J7-EDU" kind="show" id="f62-u5-9fB"/>
                         <segue destination="iGS-lA-OKo" kind="show" id="uX7-D1-ZwF"/>
                         <segue destination="ige-zs-Awl" kind="show" id="8Nu-AS-jc7"/>
+                        <segue destination="FDH-5h-vhC" kind="show" id="EFe-Py-gyF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tif-9v-Ywz" userLabel="First Responder" sceneMemberID="firstResponder"/>
