@@ -90,11 +90,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnMenuButton" destination="jHc-XI-Agw" id="wAE-8k-NHb"/>
+                        <segue destination="0JF-de-AoO" kind="presentation" id="Cow-KB-4Yv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESO-od-b7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="34.632683658170919"/>
+            <point key="canvasLocation" x="92" y="91"/>
         </scene>
         <!--Day Overview View Controller-->
         <scene sceneID="T7r-9v-Fyo">
@@ -132,7 +133,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3n-8p-QON" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1249" y="35"/>
+            <point key="canvasLocation" x="1145" y="90"/>
         </scene>
         <!--Monthly Chart View Controller-->
         <scene sceneID="pdd-tw-e7N">
@@ -325,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0c-NZ-uJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2188" y="-763.26836581709154"/>
+            <point key="canvasLocation" x="2118" y="-763"/>
         </scene>
         <!--Tasks View Controller-->
         <scene sceneID="IfD-HJ-KVF">
@@ -500,7 +501,110 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HsA-TW-rwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1248.8" y="-763.26836581709154"/>
+            <point key="canvasLocation" x="1249" y="-763"/>
+        </scene>
+        <!--Set Monthly View Controller-->
+        <scene sceneID="bHC-MZ-fUp">
+            <objects>
+                <viewController storyboardIdentifier="SetMonthlyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UZs-tT-euS" customClass="SetMonthlyViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uls-tz-4La"/>
+                        <viewControllerLayoutGuide type="bottom" id="uEF-uX-MJ8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hbA-BE-Wwh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXI-To-OpW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.80259810379999996" blue="0.4980952199" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="300"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8KX-Yx-mP7"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="categoryLetter" destination="uXI-To-OpW" id="VJg-GO-s2p"/>
+                        <segue destination="Mbw-Fu-mH6" kind="presentation" identifier="SetMonthly" id="3U8-nu-FA5"/>
+                        <segue destination="uuk-7e-Vz1" kind="show" identifier="endMonthly" id="2rv-Sb-jQz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hw4-zb-ejf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2118" y="-1523"/>
+        </scene>
+        <!--Goals View Controller-->
+        <scene sceneID="FJc-aF-5xR">
+            <objects>
+                <viewController id="Mbw-Fu-mH6" customClass="GoalsViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FZf-6r-3Yk"/>
+                        <viewControllerLayoutGuide type="bottom" id="XXx-zL-YeM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I5h-Ug-hu1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Monthly Goal" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoS-4Q-oj9">
+                                <rect key="frame" x="16" y="140" width="343" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="20"/>
+                                <color key="textColor" red="0.1058823529" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zox-QB-oBw">
+                                <rect key="frame" x="56" y="397" width="262" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1058823529" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="20"/>
+                                <state key="normal" title="Create Monthly Goal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="createGoal:" destination="Mbw-Fu-mH6" eventType="touchUpInside" id="Ply-Gj-ZkK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="y8T-nU-GuU">
+                                <rect key="frame" x="16" y="295" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50980392159999999" green="0.81568627449999997" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="GoalInput" destination="y8T-nU-GuU" id="tye-el-654"/>
+                        <outlet property="GoalLabel" destination="aoS-4Q-oj9" id="sb4-YI-zDn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0P-Ij-6Vq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2951" y="-1523"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="40y-q4-HML">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0JF-de-AoO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pch-VT-D7A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UZs-tT-euS" kind="relationship" relationship="rootViewController" id="BkT-53-3sO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xsx-gY-iqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="-1523"/>
         </scene>
     </scenes>
     <resources>
@@ -508,6 +612,6 @@
         <image name="profile" width="960" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cXZ-aM-VaW"/>
+        <segue reference="2rv-Sb-jQz"/>
     </inferredMetricsTieBreakers>
 </document>

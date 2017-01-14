@@ -22,6 +22,7 @@ class DayOverviewViewController: UITableViewController {
     var sentData4:String!
     var sentData5:String!
     var dailyTask = [String]()
+    var monthlyGoals = [String]()
     
         override func viewDidLoad() {
             super.viewDidLoad()

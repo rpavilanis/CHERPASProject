@@ -16,9 +16,10 @@ class CategoriesViewController: UITableViewController {
     var categories = ["Cleanliness", "Healthy Eating", "Exercise", "Relationships", "Personal Development", "Action-Based Living", "Spirituality"]
     
     var dailyTask = [String]()
+    var monthlyGoals = [String]()
     
-    var monthlyGoals = ["Clean for 15 minutes each day.", "H Goal", "E Goal", "R Goal", "P Goal", "A Goal",
-        "S Goal"]
+//    var monthlyGoals = ["Clean for 15 minutes each day.", "H Goal", "E Goal", "R Goal", "P Goal", "A Goal",
+//        "S Goal"]
     
     var yearlyGoals = ["At monthly check-ins, the apartment will be clean and organized due to gradual daily cleaning.", "H Goal", "E Goal", "R Goal", "P Goal", "A Goal","S Goal"]
     
@@ -28,6 +29,7 @@ class CategoriesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         queryTasks()
+        queryGoals()
         btnMenuButton.target = revealViewController()
         btnMenuButton.action = #selector(SWRevealViewController.revealToggle(_:))
         // This removes the label on the back bar - remove this if I want to add label back in for this.
@@ -165,4 +167,96 @@ class CategoriesViewController: UITableViewController {
          tableView.reloadData()
         
     }
+    
+    func queryGoals() {
+        
+        let monthEnd = Calendar.current.startOfDay(for: Date() as Date)
+        let monthStart: Date = {
+            var components = DateComponents()
+            components.day = -30
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: monthEnd)!
+        }()
+        
+        let realm = try! Realm()
+        
+        let allGoals = realm.objects(Goal)
+        print(allGoals)
+        // will also need to add filter so that it includes only appropriate category as well
+        let currentGoals = allGoals.filter("createdAt BETWEEN %@", [monthStart, monthEnd])
+        print(currentGoals)
+        for goal in currentGoals{
+            if goal.category == "Cleanliness" && goal.timeSpan == "Month" {
+                monthlyGoals.append(goal.desc)
+            }
+        }
+        
+        if monthlyGoals.count == 0 {
+            monthlyGoals.append("")
+        }
+        
+        for goal in currentGoals{
+            if goal.category == "Healthy Eating" && goal.timeSpan == "Month" {
+                monthlyGoals.append(goal.desc)
+            }
+        }
+
+        if monthlyGoals.count == 1 {
+            monthlyGoals.append("")
+        }
+        
+        for goal in currentGoals{
+            if goal.category == "Exercise" && goal.timeSpan == "Month" {
+                monthlyGoals.append(goal.desc)
+            }
+        }
+        
+        if monthlyGoals.count == 2 {
+            monthlyGoals.append("")
+        }
+        
+        for goal in currentGoals{
+            if goal.category == "Relationships" && goal.timeSpan == "Month" {
+                monthlyGoals.append(goal.desc)
+            }
+        }
+        
+        if monthlyGoals.count == 3 {
+            monthlyGoals.append("")
+        }
+        
+        for goal in currentGoals{
+            if goal.category == "Personal Development" && goal.timeSpan == "Month" {
+                monthlyGoals.append(goal.desc)
+            }
+        }
+        
+        if monthlyGoals.count == 4 {
+            monthlyGoals.append("")
+        }
+        
+        for goal in currentGoals{
+            if goal.category == "Action-Based Living" && goal.timeSpan == "Month" {
+                monthlyGoals.append(goal.desc)
+            }
+        }
+        
+        if monthlyGoals.count == 5 {
+            monthlyGoals.append("")
+        }
+        
+        for goal in currentGoals{
+            if goal.category == "Spirituality" && goal.timeSpan == "Month" {
+                monthlyGoals.append(goal.desc)
+            }
+        }
+        
+        if monthlyGoals.count == 6 {
+            monthlyGoals.append("")
+        }
+        print(monthlyGoals)
+        tableView.reloadData()
+        
+    }
+
 }

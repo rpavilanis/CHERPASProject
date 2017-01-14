@@ -49,10 +49,10 @@ final class Goal: Object {
     dynamic var isCompleted = false
     // will be month or year
     dynamic var timeSpan = ""
+    dynamic var category = ""
     // a goal belongs to one category
 //    dynamic var category: Category?
     // a goal belongs to one task
-    dynamic var task: DailyTask?
     override class func primaryKey() -> String? {
         return "goalId"
     }
