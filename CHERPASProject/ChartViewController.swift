@@ -91,18 +91,18 @@ class ChartViewController: UIViewController {
         print(allTasks)
         let weeklyTasks = allTasks.filter("createdAt BETWEEN %@", [weekStart, weekEnd])
         print(weeklyTasks)
-//        var cIsC = 0
-//        var cTotal = 0
+//        var cIsC = Double()
+//        var cTotal = Double()
         var hIsC = Double()
         var hTotal = Double()
-//        var eIsC = 0
-//        var eTotal = 0
-//        var rIsC = 0
-//        var rTotal = 0
-//        var pIsC = 0
-//        var pTotal = 0
-//        var aIsC = 0
-//        var aTotal = 0
+//        var eIsC = Double()
+//        var eTotal = Double()
+//        var rIsC = Double()
+//        var rTotal = Double()
+//        var pIsC = Double()
+//        var pTotal = Double()
+//        var aIsC = Double()
+//        var aTotal = Double()
         var sIsC = Double()
         var sTotal = Double()
         

@@ -126,11 +126,6 @@ class DayOverviewViewController: UITableViewController {
         
         // need to adjust this with if statement once add in model - if task is complete already, need to be able to change to incomplete
         let markComplete = UITableViewRowAction(style: .normal, title: "Complete") { action, index in
-//            print(indexPath)
-//            
-//            let realm = try! Realm()
-//            let selectedTask = realm.objects(DailyTask)[indexPath.row]
-//            print(realm.objects(DailyTask)[indexPath.row])
             let todayStart = Calendar.current.startOfDay(for: Date() as Date)
             let todayEnd: Date = {
                 var components = DateComponents()
@@ -146,7 +141,6 @@ class DayOverviewViewController: UITableViewController {
             print(selectedTask)
             
             try! realm.write {
-//                print(selectedTask)
                 selectedTask.isCompleted = true
                 print(selectedTask)
                 

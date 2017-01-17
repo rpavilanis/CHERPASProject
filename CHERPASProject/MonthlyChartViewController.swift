@@ -91,20 +91,20 @@ class MonthlyChartViewController: UIViewController {
         print(allTasks)
         let monthlyTasks = allTasks.filter("createdAt BETWEEN %@", [monthStart, monthEnd])
         print(monthlyTasks)
-        //        var cIsC = 0
-        //        var cTotal = 0
+        //        var cIsC = Double()
+        //        var cTotal = Double()
         var hIsC = Double()
         var hTotal = Double()
-        //        var eIsC = 0
-        //        var eTotal = 0
-        //        var rIsC = 0
-        //        var rTotal = 0
-        //        var pIsC = 0
-        //        var pTotal = 0
-        //        var aIsC = 0
-        //        var aTotal = 0
-        //        var sIsC = 0
-        //        var sTotal = 0
+        //        var eIsC = Double()
+        //        var eTotal = Double()
+        //        var rIsC = Double()
+        //        var rTotal = Double()
+        //        var pIsC = Double()
+        //        var pTotal = Double()
+        //        var aIsC = Double()
+        //        var aTotal = Double()
+        //        var sIsC = Double()
+        //        var sTotal = Double()
         
         
         for task in monthlyTasks{
