@@ -97,8 +97,6 @@ class DayOverviewViewController: UITableViewController {
 //        super.tableView(tableView, editActionsForRowAt: indexPath)
         
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
-//            let realm = try! Realm()
-//            let selectedTask = realm.objects(DailyTask)[indexPath.row]
             let todayStart = Calendar.current.startOfDay(for: Date() as Date)
             let todayEnd: Date = {
                 var components = DateComponents()
@@ -109,15 +107,14 @@ class DayOverviewViewController: UITableViewController {
             
             let realm = try! Realm()
             
-            //        let allTasks = realm.objects(DailyTask.self)
             let tasksToday = realm.objects(DailyTask.self).filter("createdAt BETWEEN %@", [todayStart, todayEnd])
             let selectedTask = tasksToday.filter("name = %@", self.sentData1)
-            print(selectedTask)
             
             try! realm.write {
                 realm.delete(selectedTask)
-                let paths = [indexPath]
-                tableView.reloadRows(at: paths, with: UITableViewRowAnimation.none)
+                // then need to reload table view here so that it shows task was deleted!!
+//                let paths = [indexPath]
+//                tableView.reloadRows(at: paths, with: UITableViewRowAnimation.none)
             }
         }
         delete.backgroundColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
@@ -129,14 +126,29 @@ class DayOverviewViewController: UITableViewController {
         
         // need to adjust this with if statement once add in model - if task is complete already, need to be able to change to incomplete
         let markComplete = UITableViewRowAction(style: .normal, title: "Complete") { action, index in
-            print(indexPath)
+//            print(indexPath)
+//            
+//            let realm = try! Realm()
+//            let selectedTask = realm.objects(DailyTask)[indexPath.row]
+//            print(realm.objects(DailyTask)[indexPath.row])
+            let todayStart = Calendar.current.startOfDay(for: Date() as Date)
+            let todayEnd: Date = {
+                var components = DateComponents()
+                components.day = 1
+                components.second = -1
+                return Calendar.current.date(byAdding: components, to: todayStart)!
+            }()
             
             let realm = try! Realm()
-            let selectedTask = realm.objects(DailyTask)[indexPath.row]
-            print(realm.objects(DailyTask)[indexPath.row])
+            
+            let tasksToday = realm.objects(DailyTask.self).filter("createdAt BETWEEN %@", [todayStart, todayEnd])
+            let selectedTask = tasksToday.filter("name = %@", self.sentData1)[indexPath.row]
+            print(selectedTask)
+            
             try! realm.write {
-                print(selectedTask)
+//                print(selectedTask)
                 selectedTask.isCompleted = true
+                print(selectedTask)
                 
             }
             if selectedTask.isCompleted == true {
