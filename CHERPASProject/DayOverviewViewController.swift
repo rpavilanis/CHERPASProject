@@ -97,8 +97,23 @@ class DayOverviewViewController: UITableViewController {
 //        super.tableView(tableView, editActionsForRowAt: indexPath)
         
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+//            let realm = try! Realm()
+//            let selectedTask = realm.objects(DailyTask)[indexPath.row]
+            let todayStart = Calendar.current.startOfDay(for: Date() as Date)
+            let todayEnd: Date = {
+                var components = DateComponents()
+                components.day = 1
+                components.second = -1
+                return Calendar.current.date(byAdding: components, to: todayStart)!
+            }()
+            
             let realm = try! Realm()
-            let selectedTask = realm.objects(DailyTask)[indexPath.row]
+            
+            //        let allTasks = realm.objects(DailyTask.self)
+            let tasksToday = realm.objects(DailyTask.self).filter("createdAt BETWEEN %@", [todayStart, todayEnd])
+            let selectedTask = tasksToday.filter("name = %@", self.sentData1)
+            print(selectedTask)
+            
             try! realm.write {
                 realm.delete(selectedTask)
                 let paths = [indexPath]
@@ -173,4 +188,23 @@ class DayOverviewViewController: UITableViewController {
 //        
 //    }
     
+//    func queryTasks() {
+//        
+//        let todayStart = Calendar.current.startOfDay(for: Date() as Date)
+//        let todayEnd: Date = {
+//            var components = DateComponents()
+//            components.day = 1
+//            components.second = -1
+//            return Calendar.current.date(byAdding: components, to: todayStart)!
+//        }()
+//
+//        let realm = try! Realm()
+//        
+////        let allTasks = realm.objects(DailyTask.self)
+//        var tasksToday = realm.objects(DailyTask.self).filter("createdAt BETWEEN %@", [todayStart, todayEnd])
+//        tasksToday.filter("name = ''")
+//    }
+    
+    
+    // query tasks - do the filter for current day - then just delete the one corresponding to the indexpath row??
 }
