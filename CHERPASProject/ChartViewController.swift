@@ -103,8 +103,8 @@ class ChartViewController: UIViewController {
 //        var pTotal = 0
 //        var aIsC = 0
 //        var aTotal = 0
-//        var sIsC = 0
-//        var sTotal = 0
+        var sIsC = Double()
+        var sTotal = Double()
         
         
         for task in weeklyTasks{
@@ -167,15 +167,15 @@ class ChartViewController: UIViewController {
 //                    aTotal += 1
 //                }
 //            }
-//            else if task.category == "Spirituality" {
-//                if task.isCompleted == true {
-//                    sIsC += 1
-//                    sTotal += 1
-//                }
-//                else {
-//                    sTotal += 1
-//                }
-//            }
+            else if task.category == "Spirituality" {
+                if task.isCompleted == true {
+                    sIsC += 1
+                    sTotal += 1
+                }
+                else {
+                    sTotal += 1
+                }
+            }
         }
         
         
@@ -189,7 +189,11 @@ class ChartViewController: UIViewController {
 //        let rPercent = rIsC / rTotal
 //        let pPercent = pIsC / pTotal
 //        let aPercent = aIsC / aTotal
-//        let sPercent = sIsC / sTotal
+        print(sTotal)
+        print(sIsC)
+        print(sIsC/sTotal)
+        let sPercent = (sIsC / sTotal) * 100
+
         
         percentComplete.append(10)
         percentComplete.append(Int(hPercent))
@@ -197,7 +201,7 @@ class ChartViewController: UIViewController {
         percentComplete.append(40)
         percentComplete.append(20)
         percentComplete.append(50)
-        percentComplete.append(70)
+        percentComplete.append(Int(sPercent))
         
         print(percentComplete)
 

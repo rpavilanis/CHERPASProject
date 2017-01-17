@@ -118,9 +118,11 @@ class DayOverviewViewController: UITableViewController {
             
             let realm = try! Realm()
             let selectedTask = realm.objects(DailyTask)[indexPath.row]
+            print(realm.objects(DailyTask)[indexPath.row])
             try! realm.write {
-                print(selectedTask.isCompleted)
+                print(selectedTask)
                 selectedTask.isCompleted = true
+                
             }
             if selectedTask.isCompleted == true {
                 let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData1)
@@ -128,6 +130,9 @@ class DayOverviewViewController: UITableViewController {
                 let cell = tableView.cellForRow(at: indexPath)
                 cell?.textLabel?.attributedText =  attributeString
             }
+//            let paths = [indexPath]
+//            tableView.reloadRows(at: paths, with: UITableViewRowAnimation.none)
+
             //remove strikethrough
             // cell.textLabel?.attributedText =  nil
         }
