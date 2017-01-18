@@ -88,12 +88,10 @@ class DayOverviewViewController: UITableViewController {
             if task.isCompleted == true {
                 let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData1)
                 attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
-//                let cell = tableView.cellForRow(at: indexPath)
                 cell.textLabel?.attributedText =  attributeString
             }
         }
 
-        
         
         switch (indexPath.section)
         {
@@ -180,8 +178,8 @@ class DayOverviewViewController: UITableViewController {
                 let cell = tableView.cellForRow(at: indexPath)
                 cell?.textLabel?.attributedText =  attributeString
             }
-//            let paths = [indexPath]
-//            tableView.reloadRows(at: paths, with: UITableViewRowAnimation.none)
+            let paths = [indexPath]
+            tableView.reloadRows(at: paths, with: UITableViewRowAnimation.none)
 
             //remove strikethrough
             // cell.textLabel?.attributedText =  nil
