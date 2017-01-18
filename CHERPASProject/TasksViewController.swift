@@ -26,6 +26,9 @@ class TasksViewController: UIViewController {
    
     // actions and methods
     
+    @IBAction func taskInput(_ sender: UITextField) {
+        self.view.endEditing(true);
+    }
     
     @IBAction func createTask(_ sender: UIButton) {
         // on button click, adds this task to the Realm database

@@ -168,10 +168,11 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MQP-Fj-c0b">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                 <state key="normal" title="Save"/>
                             </button>
                             <connections>
-                                <action selector="saveChart:" destination="FDH-5h-vhC" id="VI5-X7-pdN"/>
+                                <action selector="saveChart:" destination="FDH-5h-vhC" id="xcZ-hA-KrA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -217,6 +218,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kqe-gj-f4g">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                 <state key="normal" title="Save"/>
                             </button>
                             <connections>
@@ -226,6 +228,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="barBtn" destination="18m-9k-0ZU" id="Ypv-Vj-uZF"/>
+                        <outlet property="saveButton" destination="1co-r6-ys3" id="63Z-ci-l4x"/>
                         <outlet property="setChart" destination="taH-pn-VYc" id="0PS-iH-FCp"/>
                     </connections>
                 </viewController>
@@ -427,6 +430,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="taskInput:" destination="Aga-kV-084" eventType="editingDidEndOnExit" id="Zp9-KE-h0O"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.50980392156862742" green="0.81568627450980391" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
@@ -667,6 +673,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="goalInput:" destination="Mbw-Fu-mH6" eventType="editingDidEndOnExit" id="IY8-CH-iRd"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.50980392159999999" green="0.81568627449999997" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>

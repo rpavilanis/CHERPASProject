@@ -22,11 +22,11 @@ class GoalsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func goalInput(_ sender: UITextField) {
+        self.view.endEditing(true);
     }
+   
     
     @IBAction func createGoal(_ sender: UIButton) {
         let goal = Goal()

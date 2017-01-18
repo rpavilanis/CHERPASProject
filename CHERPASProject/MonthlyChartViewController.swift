@@ -236,7 +236,9 @@ class MonthlyChartViewController: UIViewController {
         
         
     }
-    @IBAction func saveChart(_ sender: Any) {
+
+    @IBAction func saveChart(_ sender: UIBarButtonItem) {
+        print("Hello!")
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
         view.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
