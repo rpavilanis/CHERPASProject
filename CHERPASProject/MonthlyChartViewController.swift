@@ -99,7 +99,16 @@ class MonthlyChartViewController: UIViewController {
     
     func queryTasks() {
         
-        let monthEnd = Calendar.current.startOfDay(for: Date() as Date)
+        let startOfDay = Calendar.current.startOfDay(for: Date() as Date)
+        
+        
+        let monthEnd: Date = {
+            var components = DateComponents()
+            components.day = 1
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: startOfDay)!
+        }()
+        
         let monthStart: Date = {
             var components = DateComponents()
             components.day = -30

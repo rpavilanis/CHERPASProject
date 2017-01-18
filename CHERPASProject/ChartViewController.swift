@@ -98,7 +98,17 @@ class ChartViewController: UIViewController {
     
     func queryTasks() {
         
-        let weekEnd = Calendar.current.startOfDay(for: Date() as Date)
+        let startOfDay = Calendar.current.startOfDay(for: Date() as Date)
+        
+        
+        let weekEnd: Date = {
+            var components = DateComponents()
+            components.day = 1
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: startOfDay)!
+        }()
+        
+        
         let weekStart: Date = {
             var components = DateComponents()
             components.day = -7
