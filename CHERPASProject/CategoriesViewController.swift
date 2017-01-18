@@ -70,7 +70,7 @@ class CategoriesViewController: UITableViewController {
             if task.isCompleted == true {
                 let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: dailyTask[indexPath.row])
                 attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
-                cell.textLabel?.attributedText =  attributeString
+                cell.detailTextLabel?.attributedText =  attributeString
             }
         }
         
