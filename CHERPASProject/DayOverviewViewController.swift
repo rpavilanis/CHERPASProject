@@ -29,8 +29,22 @@ class DayOverviewViewController: UITableViewController {
 //            queryTasks()
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             self.navigationItem.title = sentData5
-        
-    }
+            
+//            let realm = try! Realm()
+//            let tasks = realm.objects(DailyTask.self)
+//            print(tasks)
+//            let item = tasks[indexPath.row]
+//            print(item)
+//            //            let tasksToday = realm.objects(DailyTask.self).filter("createdAt BETWEEN %@", [todayStart, todayEnd])
+//            if item.isCompleted == true {
+//                
+//                let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData1)
+//                attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+//                let cell = tableView.cellForRow(at: indexPath)
+//                cell?.textLabel?.attributedText =  attributeString
+//            }
+            
+        }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.section [section]
@@ -68,6 +82,7 @@ class DayOverviewViewController: UITableViewController {
 ////            let cell = tableView.cellForRow(at: indexPath)
 //            cell.textLabel?.attributedText =  attributeString
 //        }
+        
         
         switch (indexPath.section)
         {

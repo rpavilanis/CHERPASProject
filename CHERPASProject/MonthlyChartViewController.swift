@@ -10,6 +10,19 @@ import UIKit
 import Charts
 import RealmSwift
 
+//@objc(BarChartFormatter)
+//public class BarChartFormatter: NSObject, IAxisValueFormatter
+//{
+//    var months: [String]! = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+//    var category: [String]! = ["C", "H", "E", "R", "P", "A", "S"]
+//    
+//    public func stringForValue(_ value: Double, axis: AxisBase?) -> String
+//    {
+//        return category[Int(value)]
+//    }
+//}
+
+
 class MonthlyChartViewController: UIViewController {
 
     @IBOutlet weak var setMonthlyChart: BarChartView!
@@ -40,6 +53,9 @@ class MonthlyChartViewController: UIViewController {
     func makeChart(dataPoints: [Int], values: [Int]) {
         setMonthlyChart.noDataText = "You don't yet have enough data to produce your weekly chart."
         
+        let formato:BarChartFormatter = BarChartFormatter()
+        let xaxis:XAxis = XAxis()
+        
         //        self.setMonthlyChart.xAxis.labelCount = self.months.count
         //        self.setMonthlyChart.xAxis.valueFormatter = DefaultAxisValueFormatter { (value, axis) -> String in return self.months[Int(value)] }
         
@@ -48,12 +64,16 @@ class MonthlyChartViewController: UIViewController {
         for i in 0..<dataPoints.count {
             let dataEntry = BarChartDataEntry(x: Double(i), y: Double(values[i]))
             dataEntries.append(dataEntry)
+            formato.stringForValue(Double(i), axis: xaxis)
         }
+        
+        xaxis.valueFormatter = formato
         
         let chartDataSet = BarChartDataSet(values: dataEntries, label: "Percentage Completed in Past Month")
         let chartData = BarChartData(dataSet: chartDataSet)
         //outlet from view
         setMonthlyChart.data = chartData
+        setMonthlyChart.xAxis.valueFormatter = xaxis.valueFormatter
         
         setMonthlyChart.descriptionText = ""
         setMonthlyChart.xAxis.labelPosition = .bottom
