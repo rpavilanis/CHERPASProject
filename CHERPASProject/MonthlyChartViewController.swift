@@ -25,6 +25,7 @@ import RealmSwift
 
 class MonthlyChartViewController: UIViewController {
 
+    @IBOutlet weak var barBtn2: UIBarButtonItem!
     @IBOutlet weak var setMonthlyChart: BarChartView!
 
     //    var months: [String]!
@@ -47,6 +48,8 @@ class MonthlyChartViewController: UIViewController {
         makeChart(dataPoints: category, values: percentComplete)
         //        updateChartWithData()
         // Do any additional setup after loading the view.
+        barBtn2.target = revealViewController()
+        barBtn2.action = #selector(SWRevealViewController.revealToggle(_:))
     }
     
     

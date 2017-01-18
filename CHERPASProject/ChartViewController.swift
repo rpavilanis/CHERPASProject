@@ -25,6 +25,7 @@ public class BarChartFormatter: NSObject, IAxisValueFormatter
 
 class ChartViewController: UIViewController {
     
+    @IBOutlet weak var barBtn: UIBarButtonItem!
     @IBOutlet weak var setChart: BarChartView!
 //    var months: [String]!
     var cleanliness = [String]()
@@ -46,6 +47,9 @@ class ChartViewController: UIViewController {
         makeChart(dataPoints: category, values: percentComplete)
         //        updateChartWithData()
         // Do any additional setup after loading the view.
+        
+        barBtn.target = revealViewController()
+        barBtn.action = #selector(SWRevealViewController.revealToggle(_:))
     }
     
  

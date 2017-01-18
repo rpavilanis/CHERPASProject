@@ -10,6 +10,7 @@ import UIKit
 
 class EndDailyCHERPASNotificationsViewController: UIViewController {
 
+    @IBOutlet weak var barBtn4: UIBarButtonItem!
     @IBAction func dateEndPickerDidSelectNewDate(_ sender: UIDatePicker) {
         let selectedDate = sender.date
         let delegate = UIApplication.shared.delegate as? AppDelegate
@@ -19,6 +20,8 @@ class EndDailyCHERPASNotificationsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        barBtn4.target = revealViewController()
+        barBtn4.action = #selector(SWRevealViewController.revealToggle(_:))
 
         // Do any additional setup after loading the view.
     }

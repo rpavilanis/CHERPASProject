@@ -135,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="1145" y="90"/>
         </scene>
-        <!--Monthly Chart View Controller-->
+        <!--Monthly Chart-->
         <scene sceneID="pdd-tw-e7N">
             <objects>
                 <viewController storyboardIdentifier="MonthlyChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FDH-5h-vhC" customClass="MonthlyChartViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -162,7 +162,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Monthly Chart" id="6Fv-4S-nKc">
+                        <barButtonItem key="leftBarButtonItem" image="Menu-50 (1)" id="dGP-vA-fv1"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="barBtn2" destination="dGP-vA-fv1" id="CZS-t7-8iW"/>
                         <outlet property="setMonthlyChart" destination="v3D-y2-Rhm" id="7YR-v6-kNv"/>
                     </connections>
                 </viewController>
@@ -170,7 +174,7 @@
             </objects>
             <point key="canvasLocation" x="-1271.2" y="856.82158920539734"/>
         </scene>
-        <!--Chart View Controller-->
+        <!--Weekly Chart-->
         <scene sceneID="y8w-Pf-AZa">
             <objects>
                 <viewController storyboardIdentifier="ChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2VP-J7-EDU" customClass="ChartViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -197,7 +201,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Weekly Chart" id="0JI-MN-tWR">
+                        <barButtonItem key="leftBarButtonItem" image="Menu-50 (1)" id="18m-9k-0ZU"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="barBtn" destination="18m-9k-0ZU" id="Ypv-Vj-uZF"/>
                         <outlet property="setChart" destination="taH-pn-VYc" id="0PS-iH-FCp"/>
                     </connections>
                 </viewController>
@@ -205,7 +213,7 @@
             </objects>
             <point key="canvasLocation" x="-2212" y="857"/>
         </scene>
-        <!--DailyCHERPAS Notifications View Controller-->
+        <!--Morning Check-In-->
         <scene sceneID="SMn-69-P4D">
             <objects>
                 <viewController storyboardIdentifier="DailyCHERPASNotificationsViewController" id="iGS-lA-OKo" customClass="DailyCHERPASNotificationsViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -244,12 +252,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Morning Check-In" id="jRy-d7-TvT">
+                        <barButtonItem key="leftBarButtonItem" image="Menu-50 (1)" id="tcI-DQ-jDA"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barBtn3" destination="tcI-DQ-jDA" id="SZ2-OG-wII"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSa-FU-Q9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-50.399999999999999" y="856.82158920539734"/>
         </scene>
-        <!--End DailyCHERPAS Notifications View Controller-->
+        <!--Evening Check-Out-->
         <scene sceneID="QUA-7z-Iw1">
             <objects>
                 <viewController storyboardIdentifier="EndDailyCHERPASNotificationsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ige-zs-Awl" customClass="EndDailyCHERPASNotificationsViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -288,6 +302,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Evening Check-Out" id="Ga4-UU-wYn">
+                        <barButtonItem key="leftBarButtonItem" image="Menu-50 (1)" id="xZO-Ke-5S7"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barBtn4" destination="xZO-Ke-5S7" id="Z6H-J9-Nwq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Imd-kX-sv4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -546,13 +566,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRi-Ge-Yyp">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="10" y="10" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.80259810379999996" blue="0.4980952199" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="300"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="right-chevron" translatesAutoresizingMaskIntoConstraints="NO" id="Zeh-KG-p73">
+                                <rect key="frame" x="362" y="334" width="17" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="down-chevron" translatesAutoresizingMaskIntoConstraints="NO" id="LMb-Xo-cRw">
                                 <rect key="frame" x="178" y="650" width="19" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -564,12 +588,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="right-chevron" translatesAutoresizingMaskIntoConstraints="NO" id="Zeh-KG-p73">
-                                <rect key="frame" x="358" y="336" width="17" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnF-Ks-djv">
-                                <rect key="frame" x="351" y="337" width="16" height="16"/>
+                                <rect key="frame" x="355" y="335" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="7"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -581,7 +601,7 @@
                     <navigationItem key="navigationItem" id="8KX-Yx-mP7"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="categoryLetter" destination="MRi-Ge-Yyp" id="Gws-Co-f7Q"/>
+                        <outlet property="categoryLetter" destination="uXI-To-OpW" id="VJg-GO-s2p"/>
                         <segue destination="Mbw-Fu-mH6" kind="presentation" identifier="SetMonthly" id="3U8-nu-FA5"/>
                         <segue destination="uuk-7e-Vz1" kind="show" identifier="endMonthly" id="2rv-Sb-jQz"/>
                     </connections>
@@ -666,6 +686,6 @@
         <image name="right-chevron" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2rv-Sb-jQz"/>
+        <segue reference="cXZ-aM-VaW"/>
     </inferredMetricsTieBreakers>
 </document>
