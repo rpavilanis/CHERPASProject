@@ -30,6 +30,8 @@ class DayOverviewViewController: UITableViewController {
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             self.navigationItem.title = sentData5
             
+        
+            
 //            let realm = try! Realm()
 //            let tasks = realm.objects(DailyTask.self)
 //            print(tasks)
@@ -67,21 +69,30 @@ class DayOverviewViewController: UITableViewController {
         
         cell.selectionStyle = .none
 
-         //Configure the cell...
-//        cell.textLabel?.text = self.items[indexPath.section][indexPath.row]
-//        
-////        cell.textLabel?.textColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
-//
-//        return cell
-//        let realm = try! Realm()
-//        let selectedTask = realm.objects(DailyTask)[indexPath.row]
-//
-//        if selectedTask.isCompleted == true {
-//            let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData1)
-//            attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
-////            let cell = tableView.cellForRow(at: indexPath)
-//            cell.textLabel?.attributedText =  attributeString
-//        }
+        let todayStart = Calendar.current.startOfDay(for: Date() as Date)
+        let todayEnd: Date = {
+            var components = DateComponents()
+            components.day = 1
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: todayStart)!
+        }()
+        
+        let realm = try! Realm()
+        
+        let tasksToday = realm.objects(DailyTask.self).filter("createdAt BETWEEN %@", [todayStart, todayEnd])
+        let selectedTask = tasksToday.filter("name = %@", self.sentData1)
+        print(selectedTask)
+        
+        for task in selectedTask {
+            
+            if task.isCompleted == true {
+                let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData1)
+                attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+//                let cell = tableView.cellForRow(at: indexPath)
+                cell.textLabel?.attributedText =  attributeString
+            }
+        }
+
         
         
         switch (indexPath.section)
