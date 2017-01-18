@@ -17,6 +17,8 @@ class GoalsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GoalLabel.text = "Add Monthly Goal for " + passedCategory
+
 
         // Do any additional setup after loading the view.
     }

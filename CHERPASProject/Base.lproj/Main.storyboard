@@ -546,17 +546,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRi-Ge-Yyp">
-                                <rect key="frame" x="10" y="10" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.80259810379999996" blue="0.4980952199" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="300"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="right-chevron" translatesAutoresizingMaskIntoConstraints="NO" id="Zeh-KG-p73">
-                                <rect key="frame" x="362" y="334" width="17" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="down-chevron" translatesAutoresizingMaskIntoConstraints="NO" id="LMb-Xo-cRw">
                                 <rect key="frame" x="178" y="650" width="19" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -568,8 +564,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="right-chevron" translatesAutoresizingMaskIntoConstraints="NO" id="Zeh-KG-p73">
+                                <rect key="frame" x="358" y="336" width="17" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnF-Ks-djv">
-                                <rect key="frame" x="355" y="335" width="16" height="16"/>
+                                <rect key="frame" x="351" y="337" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="7"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -581,7 +581,7 @@
                     <navigationItem key="navigationItem" id="8KX-Yx-mP7"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="categoryLetter" destination="uXI-To-OpW" id="VJg-GO-s2p"/>
+                        <outlet property="categoryLetter" destination="MRi-Ge-Yyp" id="Gws-Co-f7Q"/>
                         <segue destination="Mbw-Fu-mH6" kind="presentation" identifier="SetMonthly" id="3U8-nu-FA5"/>
                         <segue destination="uuk-7e-Vz1" kind="show" identifier="endMonthly" id="2rv-Sb-jQz"/>
                     </connections>

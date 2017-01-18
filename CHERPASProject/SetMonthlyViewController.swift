@@ -25,10 +25,10 @@ class SetMonthlyViewController: UIViewController {
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(SetMonthlyViewController.swipeGesture(sender:)))
         swipeUp.direction = UISwipeGestureRecognizerDirection.up
         self.view.addGestureRecognizer(swipeUp)
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     func swipeGesture(sender: UISwipeGestureRecognizer) {
         if sender.direction == .left {
             let letter = categoryLetter.text!
