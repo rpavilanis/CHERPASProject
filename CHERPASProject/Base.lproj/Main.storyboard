@@ -164,6 +164,16 @@
                     </view>
                     <navigationItem key="navigationItem" title="Monthly Chart" id="6Fv-4S-nKc">
                         <barButtonItem key="leftBarButtonItem" image="Menu-50 (1)" id="dGP-vA-fv1"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" style="plain" id="NtF-65-coP">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MQP-Fj-c0b">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                            <connections>
+                                <action selector="saveChart:" destination="FDH-5h-vhC" id="VI5-X7-pdN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="barBtn2" destination="dGP-vA-fv1" id="CZS-t7-8iW"/>
@@ -203,6 +213,16 @@
                     </view>
                     <navigationItem key="navigationItem" title="Weekly Chart" id="0JI-MN-tWR">
                         <barButtonItem key="leftBarButtonItem" image="Menu-50 (1)" id="18m-9k-0ZU"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" style="plain" id="1co-r6-ys3">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kqe-gj-f4g">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                            <connections>
+                                <action selector="saveChart:" destination="2VP-J7-EDU" id="aRU-8a-F6a"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="barBtn" destination="18m-9k-0ZU" id="Ypv-Vj-uZF"/>

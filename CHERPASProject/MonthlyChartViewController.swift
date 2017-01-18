@@ -227,5 +227,13 @@ class MonthlyChartViewController: UIViewController {
         
         
     }
+    @IBAction func saveChart(_ sender: Any) {
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+    }
     
 }
