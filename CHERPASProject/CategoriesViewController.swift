@@ -51,6 +51,31 @@ class CategoriesViewController: UITableViewController {
         cell.detailTextLabel?.text = dailyTask[indexPath.row]
         cell.detailTextLabel?.textColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
         
+        let todayStart = Calendar.current.startOfDay(for: Date() as Date)
+        let todayEnd: Date = {
+            var components = DateComponents()
+            components.day = 1
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: todayStart)!
+        }()
+        
+        let realm = try! Realm()
+        
+        let tasksToday = realm.objects(DailyTask.self).filter("createdAt BETWEEN %@", [todayStart, todayEnd])
+        let selectedTask = tasksToday.filter("name = %@", dailyTask[indexPath.row])
+        print(selectedTask)
+        
+        for task in selectedTask {
+            
+            if task.isCompleted == true {
+                let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: dailyTask[indexPath.row])
+                attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+                cell.textLabel?.attributedText =  attributeString
+            }
+        }
+        
+
+        
         return cell
     }
 

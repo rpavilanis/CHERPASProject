@@ -151,7 +151,6 @@ class DayOverviewViewController: UITableViewController {
         }
         edit.backgroundColor = UIColor(red: 130/255, green: 208/255, blue: 216/255, alpha: 1.0)
         
-        // need to adjust this with if statement once add in model - if task is complete already, need to be able to change to incomplete
         let markComplete = UITableViewRowAction(style: .normal, title: "Complete") { action, index in
             let todayStart = Calendar.current.startOfDay(for: Date() as Date)
             let todayEnd: Date = {
