@@ -131,6 +131,9 @@ class DayOverviewViewController: UITableViewController {
 //                let paths = [indexPath]
 //                tableView.reloadRows(at: paths, with: UITableViewRowAnimation.none)
             }
+//            self.tableView.reloadData()
+            self.performSegue(withIdentifier: "onDelete", sender: self)
+  
         }
         delete.backgroundColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
 

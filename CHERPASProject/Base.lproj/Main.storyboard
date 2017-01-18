@@ -123,6 +123,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="uuk-7e-Vz1" kind="show" identifier="onDelete" id="TQk-vA-qha"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -715,6 +718,6 @@
         <image name="right-chevron" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2rv-Sb-jQz"/>
+        <segue reference="TQk-vA-qha"/>
     </inferredMetricsTieBreakers>
 </document>
