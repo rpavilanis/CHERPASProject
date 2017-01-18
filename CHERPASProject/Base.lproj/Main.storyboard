@@ -586,7 +586,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRi-Ge-Yyp">
-                                <rect key="frame" x="10" y="10" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="1" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.80259810379999996" blue="0.4980952199" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="300"/>
@@ -621,14 +621,14 @@
                     <navigationItem key="navigationItem" id="8KX-Yx-mP7"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="categoryLetter" destination="uXI-To-OpW" id="VJg-GO-s2p"/>
+                        <outlet property="categoryLetter" destination="MRi-Ge-Yyp" id="gSH-wF-hw8"/>
                         <segue destination="Mbw-Fu-mH6" kind="presentation" identifier="SetMonthly" id="3U8-nu-FA5"/>
                         <segue destination="uuk-7e-Vz1" kind="show" identifier="endMonthly" id="2rv-Sb-jQz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hw4-zb-ejf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2118" y="-1523"/>
+            <point key="canvasLocation" x="2117.5999999999999" y="-1523.3883058470765"/>
         </scene>
         <!--Goals View Controller-->
         <scene sceneID="FJc-aF-5xR">
@@ -706,6 +706,6 @@
         <image name="right-chevron" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cXZ-aM-VaW"/>
+        <segue reference="2rv-Sb-jQz"/>
     </inferredMetricsTieBreakers>
 </document>

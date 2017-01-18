@@ -12,6 +12,7 @@ import RealmSwift
 
 class SetMonthlyViewController: UIViewController {
 
+ 
     @IBOutlet weak var categoryLetter: UILabel!
     var categoryLetters = ["C", "H", "E", "R", "P", "A", "S"]
     
