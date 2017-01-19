@@ -89,12 +89,6 @@ class TasksViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         }
         
     }
-//    
-//    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-//        let titleData = recentTasks[row]
-//        let myTitle = NSAttributedString(string: titleData, attributes: [NSForegroundColorAttributeName:UIColor.white])
-//        return myTitle
-//    }
     
     func queryTasks() {
         
