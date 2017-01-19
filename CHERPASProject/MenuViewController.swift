@@ -19,7 +19,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        menuNameArr = ["Home", "Set Daily CHERPAS", "Set Monthly CHERPAS", "Week in Review", "Month in Review", "Check-In Notification", "Check-Out Notification"]
+        menuNameArr = ["Home", "Set Daily CHERPAS", "Set CHERPAS Goals", "Week in Review", "Month in Review", "Check-In Notification", "Check-Out Notification"]
         iconImage = [UIImage(named: "home")!, UIImage(named: "CHERPAS")!, UIImage(named: "CHERPAS")!, UIImage(named: "data")!, UIImage(named: "data")!, UIImage(named: "notifications")!, UIImage(named: "notifications")!]
         
         imgProfile.layer.borderColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0).cgColor
@@ -68,7 +68,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         }
         
-        if cell.lblMenuName.text! == "Set Monthly CHERPAS" {
+        if cell.lblMenuName.text! == "Set CHERPAS Goals" {
             let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let desController = mainStoryboard.instantiateViewController(withIdentifier: "SetMonthlyViewController") as! SetMonthlyViewController
             let newFrontViewController = UINavigationController.init(rootViewController:desController)
