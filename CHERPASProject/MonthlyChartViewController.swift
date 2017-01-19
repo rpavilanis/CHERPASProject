@@ -120,39 +120,37 @@ class MonthlyChartViewController: UIViewController {
         let realm = try! Realm()
         
         let allTasks = realm.objects(DailyTask)
-        print(allTasks)
         let monthlyTasks = allTasks.filter("createdAt BETWEEN %@", [monthStart, monthEnd])
-        print(monthlyTasks)
-        //        var cIsC = Double()
-        //        var cTotal = Double()
+        var cIsC = Double()
+        var cTotal = Double()
         var hIsC = Double()
         var hTotal = Double()
-        //        var eIsC = Double()
-        //        var eTotal = Double()
-        //        var rIsC = Double()
-        //        var rTotal = Double()
-        //        var pIsC = Double()
-        //        var pTotal = Double()
-        //        var aIsC = Double()
-        //        var aTotal = Double()
-        //        var sIsC = Double()
-        //        var sTotal = Double()
+        var eIsC = Double()
+        var eTotal = Double()
+        var rIsC = Double()
+        var rTotal = Double()
+        var pIsC = Double()
+        var pTotal = Double()
+        var aIsC = Double()
+        var aTotal = Double()
+        var sIsC = Double()
+        var sTotal = Double()
         
         
         for task in monthlyTasks{
-            //            if task.category == "Cleanliness" {
-            //                // assign 1 to isCompleted is true and 0 if false.  then take the total number of items in category, and divide total of trues by it to get percent complete.
-            //                // within loop: add one to is completed and add 1 to total, then after loop, do calculations and assign to variables - then push values into array that I will use in project
-            //
-            //                if task.isCompleted == true {
-            //                    cIsC += 1
-            //                    cTotal += 1
-            //                }
-            //                else {
-            //                   cTotal += 1
-            //                }
-            //            }
-            if task.category == "Healthy Eating" {
+            if task.category == "Cleanliness" {
+                // assign 1 to isCompleted is true and 0 if false.  then take the total number of items in category, and divide total of trues by it to get percent complete.
+                // within loop: add one to is completed and add 1 to total, then after loop, do calculations and assign to variables - then push values into array that I will use in project
+
+                if task.isCompleted == true {
+                    cIsC += 1
+                    cTotal += 1
+                }
+                else {
+                   cTotal += 1
+                }
+            }
+            else if task.category == "Healthy Eating" {
                 if task.isCompleted == true {
                     hIsC += 1
                     hTotal += 1
@@ -162,79 +160,71 @@ class MonthlyChartViewController: UIViewController {
                 }
             }
             
-            
-            //            else if task.category == "Exercise" {
-            //                if task.isCompleted == true {
-            //                    eIsC += 1
-            //                    eTotal += 1
-            //                }
-            //                else {
-            //                    eTotal += 1
-            //                }
-            //            }
-            //            else if task.category == "Relationships" {
-            //                if task.isCompleted == true {
-            //                    rIsC += 1
-            //                    rTotal += 1
-            //                }
-            //                else {
-            //                    rTotal += 1
-            //                }
-            //            }
-            //            else if task.category == "Personal Development" {
-            //                if task.isCompleted == true {
-            //                    pIsC += 1
-            //                    pTotal += 1
-            //                }
-            //                else {
-            //                    pTotal += 1
-            //                }
-            //            }
-            //            else if task.category == "Action-Based Living" {
-            //                if task.isCompleted == true {
-            //                    aIsC += 1
-            //                    aTotal += 1
-            //                }
-            //                else {
-            //                    aTotal += 1
-            //                }
-            //            }
-            //            else if task.category == "Spirituality" {
-            //                if task.isCompleted == true {
-            //                    sIsC += 1
-            //                    sTotal += 1
-            //                }
-            //                else {
-            //                    sTotal += 1
-            //                }
-            //            }
+
+            else if task.category == "Exercise" {
+                if task.isCompleted == true {
+                    eIsC += 1
+                    eTotal += 1
+                }
+                else {
+                    eTotal += 1
+                }
+            }
+            else if task.category == "Relationships" {
+                if task.isCompleted == true {
+                    rIsC += 1
+                    rTotal += 1
+                }
+                else {
+                    rTotal += 1
+                }
+            }
+            else if task.category == "Personal Development" {
+                if task.isCompleted == true {
+                    pIsC += 1
+                    pTotal += 1
+                }
+                else {
+                    pTotal += 1
+                }
+            }
+            else if task.category == "Action-Based Living" {
+                if task.isCompleted == true {
+                    aIsC += 1
+                    aTotal += 1
+                }
+                else {
+                    aTotal += 1
+                }
+            }
+            else if task.category == "Spirituality" {
+                if task.isCompleted == true {
+                    sIsC += 1
+                    sTotal += 1
+                }
+                else {
+                    sTotal += 1
+                }
+            }
         }
         
         
-        //        let cPercent = cIsC / cTotal
-        print(hTotal)
-        print(hIsC)
-        print(hIsC/hTotal)
+        let cPercent = (cIsC / cTotal) * 100
         let hPercent = (hIsC / hTotal) * 100
-        print(hPercent)
-        //        let ePercent = eIsC / eTotal
-        //        let rPercent = rIsC / rTotal
-        //        let pPercent = pIsC / pTotal
-        //        let aPercent = aIsC / aTotal
-        //        let sPercent = sIsC / sTotal
+        let ePercent = (eIsC / eTotal) * 100
+        let rPercent = (rIsC / rTotal) * 100
+        let pPercent = (pIsC / pTotal) * 100
+        let aPercent = (aIsC / aTotal) * 100
+        let sPercent = (sIsC / sTotal) * 100
         
-        percentComplete.append(10)
+        percentComplete.append(Int(cPercent))
         percentComplete.append(Int(hPercent))
-        percentComplete.append(20)
-        percentComplete.append(40)
-        percentComplete.append(20)
-        percentComplete.append(50)
-        percentComplete.append(70)
-        
-        print(percentComplete)
-        
-        
-        
+        percentComplete.append(Int(ePercent))
+        percentComplete.append(Int(rPercent))
+        percentComplete.append(Int(pPercent))
+        percentComplete.append(Int(aPercent))
+        percentComplete.append(Int(sPercent))
+
     }
 
     @IBAction func saveChart(_ sender: UIBarButtonItem) {
