@@ -61,6 +61,7 @@ class DayOverviewViewController: UITableViewController {
         
         cell.selectionStyle = .none
 
+        // checks for completed tasks and adds strikethrough if they are completed
         let todayStart = Calendar.current.startOfDay(for: Date() as Date)
         let todayEnd: Date = {
             var components = DateComponents()
@@ -73,7 +74,6 @@ class DayOverviewViewController: UITableViewController {
         
         let tasksToday = realm.objects(DailyTask.self).filter("createdAt BETWEEN %@", [todayStart, todayEnd])
         let selectedTask = tasksToday.filter("name = %@", self.sentData1)
-        print(selectedTask)
         
         for task in selectedTask {
             
@@ -83,6 +83,67 @@ class DayOverviewViewController: UITableViewController {
                 cell.textLabel?.attributedText =  attributeString
             }
         }
+        // checks for completed monthly goals and adds strikethrough if completed
+        let startOfDay = Calendar.current.startOfDay(for: Date() as Date)
+        
+        
+        let monthEnd: Date = {
+            var components = DateComponents()
+            components.day = 1
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: startOfDay)!
+        }()
+        
+        let monthStart: Date = {
+            var components = DateComponents()
+            components.day = -30
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: monthEnd)!
+        }()
+
+        
+        let goalsToday = realm.objects(Goal.self).filter("createdAt BETWEEN %@", [monthStart, monthEnd])
+        let monthGoals = goalsToday.filter("timeSpan = 'Month'")
+        let selectedGoal = monthGoals.filter("desc = %@", self.sentData2)
+        
+        for goal in selectedGoal {
+            
+            if goal.isCompleted == true {
+                let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData2)
+                attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+                cell.textLabel?.attributedText =  attributeString
+            }
+        }
+        
+        // checks for completed yearly goals and adds strikethrough if completed
+        
+        let yearEnd: Date = {
+            var components = DateComponents()
+            components.day = 1
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: startOfDay)!
+        }()
+        
+        let yearStart: Date = {
+            var components = DateComponents()
+            components.day = -365
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: yearEnd)!
+        }()
+        
+        let yearlyGoals = realm.objects(Goal.self).filter("createdAt BETWEEN %@", [yearStart, yearEnd])
+        let yearGoal = yearlyGoals.filter("timeSpan = 'Year'")
+        let selectedYGoal = yearGoal.filter("desc = %@", self.sentData3)
+        
+        for goal in selectedYGoal {
+            
+            if goal.isCompleted == true {
+                let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData3)
+                attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+                cell.textLabel?.attributedText =  attributeString
+            }
+        }
+
 
         
         switch (indexPath.section)
@@ -201,33 +262,113 @@ class DayOverviewViewController: UITableViewController {
         edit.backgroundColor = UIColor(red: 130/255, green: 208/255, blue: 216/255, alpha: 1.0)
         
         let markComplete = UITableViewRowAction(style: .normal, title: "Complete") { action, index in
-            let todayStart = Calendar.current.startOfDay(for: Date() as Date)
-            let todayEnd: Date = {
-                var components = DateComponents()
-                components.day = 1
-                components.second = -1
-                return Calendar.current.date(byAdding: components, to: todayStart)!
-            }()
             
-            let realm = try! Realm()
+            if indexPath.section == 0 {
+                let todayStart = Calendar.current.startOfDay(for: Date() as Date)
+                let todayEnd: Date = {
+                    var components = DateComponents()
+                    components.day = 1
+                    components.second = -1
+                    return Calendar.current.date(byAdding: components, to: todayStart)!
+                }()
+                
+                let realm = try! Realm()
+                
+                let tasksToday = realm.objects(DailyTask.self).filter("createdAt BETWEEN %@", [todayStart, todayEnd])
+                let selectedTask = tasksToday.filter("name = %@", self.sentData1)[indexPath.row]
+                
+                try! realm.write {
+                    selectedTask.isCompleted = true
+                    
+                }
+                if selectedTask.isCompleted == true {
+                    let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData1)
+                    attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+                    let cell = tableView.cellForRow(at: indexPath)
+                    cell?.textLabel?.attributedText =  attributeString
+                }
+                let paths = [indexPath]
+                tableView.reloadRows(at: paths, with: UITableViewRowAnimation.none)
+            }
             
-            let tasksToday = realm.objects(DailyTask.self).filter("createdAt BETWEEN %@", [todayStart, todayEnd])
-            let selectedTask = tasksToday.filter("name = %@", self.sentData1)[indexPath.row]
-            print(selectedTask)
+            else if indexPath.section == 1 {
+                
+                let startOfDay = Calendar.current.startOfDay(for: Date() as Date)
+                
+                
+                let monthEnd: Date = {
+                    var components = DateComponents()
+                    components.day = 1
+                    components.second = -1
+                    return Calendar.current.date(byAdding: components, to: startOfDay)!
+                }()
+                
+                let monthStart: Date = {
+                    var components = DateComponents()
+                    components.day = -30
+                    components.second = -1
+                    return Calendar.current.date(byAdding: components, to: monthEnd)!
+                }()
+                
+                let realm = try! Realm()
+                
+                let goalsToday = realm.objects(Goal.self).filter("createdAt BETWEEN %@", [monthStart, monthEnd])
+                let monthGoals = goalsToday.filter("timeSpan = 'Month'")
+                let selectedGoal = monthGoals.filter("desc = %@", self.sentData2)[indexPath.row]
+                
+                try! realm.write {
+                    selectedGoal.isCompleted = true
+                    
+                }
+                if selectedGoal.isCompleted == true {
+                    let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData2)
+                    attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+                    let cell = tableView.cellForRow(at: indexPath)
+                    cell?.textLabel?.attributedText =  attributeString
+                }
+                let paths = [indexPath]
+                tableView.reloadRows(at: paths, with: UITableViewRowAnimation.none)
+
+            }
             
-            try! realm.write {
-                selectedTask.isCompleted = true
-                print(selectedTask)
+            else if indexPath.section == 2 {
+                
+                let startOfDay = Calendar.current.startOfDay(for: Date() as Date)
+                
+                let yearEnd: Date = {
+                    var components = DateComponents()
+                    components.day = 1
+                    components.second = -1
+                    return Calendar.current.date(byAdding: components, to: startOfDay)!
+                }()
+                
+                let yearStart: Date = {
+                    var components = DateComponents()
+                    components.day = -365
+                    components.second = -1
+                    return Calendar.current.date(byAdding: components, to: yearEnd)!
+                }()
+                let realm = try! Realm()
+                
+                let yearlyGoals = realm.objects(Goal.self).filter("createdAt BETWEEN %@", [yearStart, yearEnd])
+                let yearGoal = yearlyGoals.filter("timeSpan = 'Year'")
+                let selectedGoal = yearGoal.filter("desc = %@", self.sentData3)[indexPath.row]
+            
+                
+                try! realm.write {
+                    selectedGoal.isCompleted = true
+                    
+                }
+                if selectedGoal.isCompleted == true {
+                    let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData3)
+                    attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+                    let cell = tableView.cellForRow(at: indexPath)
+                    cell?.textLabel?.attributedText =  attributeString
+                }
+                let paths = [indexPath]
+                tableView.reloadRows(at: paths, with: UITableViewRowAnimation.none)
                 
             }
-            if selectedTask.isCompleted == true {
-                let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData1)
-                attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
-                let cell = tableView.cellForRow(at: indexPath)
-                cell?.textLabel?.attributedText =  attributeString
-            }
-            let paths = [indexPath]
-            tableView.reloadRows(at: paths, with: UITableViewRowAnimation.none)
 
             //remove strikethrough
             // cell.textLabel?.attributedText =  nil
