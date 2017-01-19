@@ -23,28 +23,12 @@ class DayOverviewViewController: UITableViewController {
     var sentData5:String!
     var dailyTask = [String]()
     var monthlyGoals = [String]()
+    var yearlyGoals = [String]()
     
         override func viewDidLoad() {
             super.viewDidLoad()
-//            queryTasks()
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
             self.navigationItem.title = sentData5
-            
-        
-            
-//            let realm = try! Realm()
-//            let tasks = realm.objects(DailyTask.self)
-//            print(tasks)
-//            let item = tasks[indexPath.row]
-//            print(item)
-//            //            let tasksToday = realm.objects(DailyTask.self).filter("createdAt BETWEEN %@", [todayStart, todayEnd])
-//            if item.isCompleted == true {
-//                
-//                let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData1)
-//                attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
-//                let cell = tableView.cellForRow(at: indexPath)
-//                cell?.textLabel?.attributedText =  attributeString
-//            }
             
         }
     
@@ -195,48 +179,4 @@ class DayOverviewViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
     }
     
-    
-//    func queryTasks() {
-//        
-//        let todayStart = Calendar.current.startOfDay(for: Date() as Date)
-//        let todayEnd: Date = {
-//            var components = DateComponents()
-//            components.day = 1
-//            components.second = -1
-//            return Calendar.current.date(byAdding: components, to: todayStart)!
-//        }()
-//        
-//        let realm = try! Realm()
-//        
-//        let allTasks = realm.objects(DailyTask)
-//        // will also need to add filter so that it includes only appropriate category as well
-//        let currentTask = allTasks.filter("createdAt BETWEEN %@", [todayStart, todayEnd])
-//        
-//        for task in currentTask{
-//            dailyTask.append(task.name)
-//        
-//        tableView.reloadData()
-//        }
-//        
-//    }
-    
-//    func queryTasks() {
-//        
-//        let todayStart = Calendar.current.startOfDay(for: Date() as Date)
-//        let todayEnd: Date = {
-//            var components = DateComponents()
-//            components.day = 1
-//            components.second = -1
-//            return Calendar.current.date(byAdding: components, to: todayStart)!
-//        }()
-//
-//        let realm = try! Realm()
-//        
-////        let allTasks = realm.objects(DailyTask.self)
-//        var tasksToday = realm.objects(DailyTask.self).filter("createdAt BETWEEN %@", [todayStart, todayEnd])
-//        tasksToday.filter("name = ''")
-//    }
-    
-    
-    // query tasks - do the filter for current day - then just delete the one corresponding to the indexpath row??
-}
+  }

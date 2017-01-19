@@ -14,6 +14,11 @@ class GoalsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var GoalInput: UITextField!
     @IBOutlet weak var selectLabel: UILabel!
     @IBOutlet weak var dropDown: UIPickerView!
+    @IBOutlet weak var timeDropDown: UIPickerView!
+    
+    var passedOption = ""
+    
+    var options = ["Month", "Year"]
     
     var recentGoals = [String]()
     
@@ -22,7 +27,7 @@ class GoalsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         queryGoals()
-        GoalLabel.text = "Add Monthly Goal for " + passedCategory
+        GoalLabel.text = "Add Goal for " + passedCategory
 
 
         // Do any additional setup after loading the view.
@@ -36,7 +41,7 @@ class GoalsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBAction func createGoal(_ sender: UIButton) {
         let goal = Goal()
         goal.desc = GoalInput.text!
-        goal.timeSpan = "Month"
+        goal.timeSpan = passedOption
         goal.category = passedCategory
         let realm = try! Realm()
         try! realm.write {
@@ -56,25 +61,39 @@ class GoalsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-        
-        return recentGoals.count
-        
+        if pickerView == dropDown {
+            return recentGoals.count
+        } else if pickerView == timeDropDown{
+            return options.count
+        }
+        else {
+            return 0
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        self.view.endEditing(true)
-        return recentGoals[row]
-        
+        if pickerView == dropDown {
+            self.view.endEditing(true)
+            return recentGoals[row]
+        } else if pickerView == timeDropDown{
+            self.view.endEditing(true)
+            return options[row]
+        }
+        else {
+            return ""
+        }
+    
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        self.GoalInput.text = self.recentGoals[row]
-        //        self.TaskInput.textColor = UIColor.white
-        self.dropDown.isHidden = true
-        self.selectLabel.isHidden = true
-        
+        if pickerView == dropDown {
+            self.GoalInput.text = self.recentGoals[row]
+            self.dropDown.isHidden = true
+            self.selectLabel.isHidden = true
+        }
+        if pickerView == timeDropDown {
+            passedOption = options[row]
+        }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -101,7 +120,7 @@ class GoalsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         let monthStart: Date = {
             var components = DateComponents()
-            components.day = -90
+            components.day = -365
             components.second = -1
             return Calendar.current.date(byAdding: components, to: monthEnd)!
         }()

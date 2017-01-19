@@ -671,14 +671,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Monthly Goal" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoS-4Q-oj9">
-                                <rect key="frame" x="16" y="140" width="343" height="108"/>
+                                <rect key="frame" x="16" y="86" width="343" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="20"/>
                                 <color key="textColor" red="0.1058823529" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="y8T-nU-GuU">
-                                <rect key="frame" x="16" y="295" width="343" height="30"/>
+                                <rect key="frame" x="16" y="202" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
@@ -689,26 +689,41 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or choose from recently selected goals:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1f-G0-sqQ">
-                                <rect key="frame" x="16" y="363" width="343" height="21"/>
+                                <rect key="frame" x="16" y="256" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                 <color key="textColor" red="0.1058823529" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ILa-pm-Fxs">
-                                <rect key="frame" x="16" y="392" width="343" height="136"/>
+                                <rect key="frame" x="16" y="285" width="343" height="136"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Mbw-Fu-mH6" id="bh9-Vb-vn3"/>
                                     <outlet property="delegate" destination="Mbw-Fu-mH6" id="1Sn-ZN-Wvq"/>
                                 </connections>
                             </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M5Z-aM-Jo2">
+                                <rect key="frame" x="16" y="464" width="343" height="85"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Mbw-Fu-mH6" id="DVN-hJ-Oc3"/>
+                                    <outlet property="delegate" destination="Mbw-Fu-mH6" id="Wo3-aj-HlL"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is this a yearly or monthly goal?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxT-1K-fIC">
+                                <rect key="frame" x="16" y="435" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                <color key="textColor" red="0.1058823529" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zox-QB-oBw">
-                                <rect key="frame" x="56" y="557" width="262" height="52"/>
+                                <rect key="frame" x="56" y="579" width="262" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1058823529" green="0.48627450979999998" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="20"/>
-                                <state key="normal" title="Create Monthly Goal">
+                                <state key="normal" title="Create Goal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -723,6 +738,7 @@
                         <outlet property="GoalLabel" destination="aoS-4Q-oj9" id="sb4-YI-zDn"/>
                         <outlet property="dropDown" destination="ILa-pm-Fxs" id="lIX-Fz-G96"/>
                         <outlet property="selectLabel" destination="f1f-G0-sqQ" id="hEz-Mw-8Ec"/>
+                        <outlet property="timeDropDown" destination="M5Z-aM-Jo2" id="bfR-fH-Uvl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0P-Ij-6Vq" userLabel="First Responder" sceneMemberID="firstResponder"/>

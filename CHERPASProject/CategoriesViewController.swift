@@ -17,11 +17,9 @@ class CategoriesViewController: UITableViewController {
     
     var dailyTask = [String]()
     var monthlyGoals = [String]()
-    
-//    var monthlyGoals = ["Clean for 15 minutes each day.", "H Goal", "E Goal", "R Goal", "P Goal", "A Goal",
-//        "S Goal"]
-    
-    var yearlyGoals = ["At monthly check-ins, the apartment will be clean and organized due to gradual daily cleaning.", "H Goal", "E Goal", "R Goal", "P Goal", "A Goal","S Goal"]
+    var yearlyGoals = [String]()
+//    
+//    var yearlyGoals = ["At monthly check-ins, the apartment will be clean and organized due to gradual daily cleaning.", "H Goal", "E Goal", "R Goal", "P Goal", "A Goal","S Goal"]
     
     var quotes = ["Our goals can only be reached through a vehicle of a plan, in which we must fervently believe and upon which we must vigorously act. There is no other route to success.", "H Quote", "E Quote", "R Quote", "P Quote", "A Goal","S Quote"]
 
@@ -30,6 +28,7 @@ class CategoriesViewController: UITableViewController {
         super.viewDidLoad()
         queryTasks()
         queryGoals()
+        queryYearlyGoals()
         btnMenuButton.target = revealViewController()
         btnMenuButton.action = #selector(SWRevealViewController.revealToggle(_:))
         // This removes the label on the back bar - remove this if I want to add label back in for this.
@@ -289,6 +288,106 @@ class CategoriesViewController: UITableViewController {
             monthlyGoals.append("")
         }
         print(monthlyGoals)
+        tableView.reloadData()
+        
+    }
+    
+    func queryYearlyGoals() {
+        
+        let startOfDay = Calendar.current.startOfDay(for: Date() as Date)
+        
+        
+        let yearEnd: Date = {
+            var components = DateComponents()
+            components.day = 1
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: startOfDay)!
+        }()
+        
+        let yearStart: Date = {
+            var components = DateComponents()
+            components.day = -365
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: yearEnd)!
+        }()
+        
+        let realm = try! Realm()
+        
+        let allGoals = realm.objects(Goal)
+        let currentGoals = allGoals.filter("createdAt BETWEEN %@", [yearStart, yearEnd])
+        for goal in currentGoals{
+            if goal.category == "Cleanliness" && goal.timeSpan == "Year" {
+                yearlyGoals.append(goal.desc)
+            }
+        }
+        
+        if yearlyGoals.count == 0 {
+            yearlyGoals.append("")
+        }
+        
+        for goal in currentGoals{
+            if goal.category == "Healthy Eating" && goal.timeSpan == "Year" {
+                yearlyGoals.append(goal.desc)
+            }
+        }
+        
+        if yearlyGoals.count == 1 {
+            yearlyGoals.append("")
+        }
+        
+        for goal in currentGoals{
+            if goal.category == "Exercise" && goal.timeSpan == "Year" {
+                yearlyGoals.append(goal.desc)
+            }
+        }
+        
+        if yearlyGoals.count == 2 {
+            yearlyGoals.append("")
+        }
+        
+        for goal in currentGoals{
+            if goal.category == "Relationships" && goal.timeSpan == "Year" {
+                yearlyGoals.append(goal.desc)
+
+            }
+        }
+        
+        if yearlyGoals.count == 3 {
+            yearlyGoals.append("")
+        }
+        
+        for goal in currentGoals{
+            if goal.category == "Personal Development" && goal.timeSpan == "Year" {
+                yearlyGoals.append(goal.desc)
+            }
+        }
+        
+        if yearlyGoals.count == 4 {
+            yearlyGoals.append("")
+        }
+        
+        for goal in currentGoals{
+            if goal.category == "Action-Based Living" && goal.timeSpan == "Year" {
+                yearlyGoals.append(goal.desc)
+
+            }
+        }
+        
+        if yearlyGoals.count == 5 {
+            yearlyGoals.append("")
+        }
+        
+        for goal in currentGoals{
+            if goal.category == "Spirituality" && goal.timeSpan == "Year" {
+                yearlyGoals.append(goal.desc)
+
+            }
+        }
+        
+        if yearlyGoals.count == 6 {
+            yearlyGoals.append("")
+        }
+        
         tableView.reloadData()
         
     }
