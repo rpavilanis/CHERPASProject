@@ -21,7 +21,7 @@ class CategoriesViewController: UITableViewController {
 //    
 //    var yearlyGoals = ["At monthly check-ins, the apartment will be clean and organized due to gradual daily cleaning.", "H Goal", "E Goal", "R Goal", "P Goal", "A Goal","S Goal"]
     
-    var quotes = ["Our goals can only be reached through a vehicle of a plan, in which we must fervently believe and upon which we must vigorously act. There is no other route to success.", "H Quote", "E Quote", "R Quote", "P Quote", "A Goal","S Quote"]
+    var quotes = ["Our goals can only be reached through a vehicle of a plan, in which we must fervently believe and upon which we must vigorously act. There is no other route to success.", "If you are not prepared to be wrong, you will never come up with anything original. -Sir Ken Robinson", "Your power does not come from luck. Your power comes from you, and what you invest in it every day, in the work and the sweat and the giving a damn. - Rachel Sklar", "Imperfect action is better than a perfect plan.", "I want to be around people that do things. I don’t want to be around people anymore that judge or talk about what people do. I want to be around people that dream and support and do things.", "How wild it was, to let it be. - Cheryl Strayed","At any given moment, you have the power to say: This is not how the story is going to end. -Christine Mason Miller", "The pain you feel today will be the strength you feel tomorrow.", "Everyone wants to live on top of the mountain, but all the happiness and growth occurs while you’re climbing it. - Andy Rooney", "It is better to make many small steps in the right direction than to make a great leap forward only to stumble backward.", "Never give up on a dream just because of the time it will take to accomplish it. Time will pass anyway. – Earl Nightingale", "If you don’t like something, change it. If you can’t change it, change your attitude. Don’t complain.", "Can you remember who you were, before the world told you who you should be? - Danielle LaPorte", "You can’t use up creativity. The more you use, the more you have. - Maya Angelou", "The scariest moment is just before you start. - Stephen King"]
 
 
     override func viewDidLoad() {
@@ -92,7 +92,8 @@ class CategoriesViewController: UITableViewController {
                 let yearGoal = yearlyGoals[indexpath.row] as String
                 dayOverview.sentData3 = yearGoal
                 
-                let dailyQuote = quotes[indexpath.row] as String
+                let randomIndex = Int(arc4random_uniform(UInt32(quotes.count)))
+                let dailyQuote = quotes[randomIndex] as String
                 dayOverview.sentData4 = dailyQuote
                 
                 let CHERPAS = categories[indexpath.row] as String
