@@ -18,11 +18,15 @@ class TasksViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var TaskLabel: UILabel!
     @IBOutlet weak var TaskInput: UITextField!
     @IBOutlet weak var dropDown: UIPickerView!
+    @IBOutlet weak var selectLabel: UILabel!
     
-    var list = ["1", "2", "3"]
+    var recentTasks = [String]()
+    
+//    var list = ["1", "2", "3"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        queryTasks()
         TaskLabel.text = "Add Daily Task for " + passedCategory
     }
 
@@ -56,21 +60,23 @@ class TasksViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         
-        return list.count
+        return recentTasks.count
         
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         self.view.endEditing(true)
-        return list[row]
+        return recentTasks[row]
         
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        self.TaskInput.text = self.list[row]
+        self.TaskInput.text = self.recentTasks[row]
+//        self.TaskInput.textColor = UIColor.white
         self.dropDown.isHidden = true
+        self.selectLabel.isHidden = true
         
     }
     
@@ -78,10 +84,51 @@ class TasksViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         if textField == self.TaskInput {
             self.dropDown.isHidden = false
+            self.selectLabel.isHidden = false
             //if you dont want the users to se the keyboard type:
         }
         
     }
+//    
+//    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+//        let titleData = recentTasks[row]
+//        let myTitle = NSAttributedString(string: titleData, attributes: [NSForegroundColorAttributeName:UIColor.white])
+//        return myTitle
+//    }
     
+    func queryTasks() {
+        
+        let startOfDay = Calendar.current.startOfDay(for: Date() as Date)
+        
+        
+        let weekEnd: Date = {
+            var components = DateComponents()
+            components.day = 1
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: startOfDay)!
+        }()
+        
+        
+        let weekStart: Date = {
+            var components = DateComponents()
+            components.day = -7
+            components.second = -1
+            return Calendar.current.date(byAdding: components, to: weekEnd)!
+        }()
+        
+        let realm = try! Realm()
+        
+        let allTasks = realm.objects(DailyTask)
+        // will also need to add filter so that it includes only appropriate category as well
+        let currentTasks = allTasks.filter("createdAt BETWEEN %@", [weekStart, weekEnd])
+        let tasksByCategory = currentTasks.filter("category = %@", passedCategory)
+        
+        for task in tasksByCategory {
+        
+            recentTasks.append(task.name)
+        
+        }
+        
+    }
 
 }
