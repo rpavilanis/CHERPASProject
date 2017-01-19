@@ -147,7 +147,7 @@ class DayOverviewViewController: UITableViewController {
         delete.backgroundColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
 
         let edit = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
-            print("edit button tapped")
+//            self.performSegue(withIdentifier: "editTasks", sender: self)
         }
         edit.backgroundColor = UIColor(red: 130/255, green: 208/255, blue: 216/255, alpha: 1.0)
         
