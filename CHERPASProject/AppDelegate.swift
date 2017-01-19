@@ -73,10 +73,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func scheduleNotification(at date: Date) {
+//        let calendar = Calendar(identifier: .gregorian)
+//        let components = calendar.dateComponents(in: .current, from: date)
+//        let newComponents = DateComponents(calendar: calendar, timeZone: .current, month: components.month, day: components.day, hour: components.hour, minute: components.minute)
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: true)
+        
         let calendar = Calendar(identifier: .gregorian)
         let components = calendar.dateComponents(in: .current, from: date)
-        let newComponents = DateComponents(calendar: calendar, timeZone: .current, month: components.month, day: components.day, hour: components.hour, minute: components.minute)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: false)
+        let newComponents = DateComponents(calendar: calendar, timeZone: .current, hour: components.hour, minute: components.minute)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: true)
+
         
         let content = UNMutableNotificationContent()
         content.title = "CHERPAS Reminder"
