@@ -184,6 +184,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveChart:" destination="FDH-5h-vhC" eventType="touchUpInside" id="XwB-Dx-VLx"/>
+                                </connections>
                             </button>
                             <connections>
                                 <action selector="saveChart:" destination="FDH-5h-vhC" id="xcZ-hA-KrA"/>
@@ -234,6 +237,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveChart:" destination="2VP-J7-EDU" eventType="touchUpInside" id="aOB-dL-vgE"/>
+                                </connections>
                             </button>
                             <connections>
                                 <action selector="saveChart:" destination="2VP-J7-EDU" id="aRU-8a-F6a"/>

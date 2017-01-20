@@ -226,9 +226,10 @@ class MonthlyChartViewController: UIViewController {
         percentComplete.append(Int(sPercent))
 
     }
-
-    @IBAction func saveChart(_ sender: UIBarButtonItem) {
-        print("Hello!")
+    
+    
+    @IBAction func saveChart(_ sender: UIButton) {
+        
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
         view.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
@@ -236,5 +237,7 @@ class MonthlyChartViewController: UIViewController {
         
         UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
     }
+
+  
     
 }

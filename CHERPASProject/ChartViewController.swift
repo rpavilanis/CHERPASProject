@@ -49,16 +49,24 @@ class ChartViewController: UIViewController {
         barBtn.action = #selector(SWRevealViewController.revealToggle(_:))
     }
     
-    @IBAction func saveChart(_ sender: UIBarButtonItem) {
-        print("hello")
+    @IBAction func saveChart(_ sender: UIButton) {
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
         view.layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
+
         UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
     }
-    
+//    @IBAction func saveChart(_ sender: UIBarButtonItem) {
+//        print("hello")
+////        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
+////        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+////        let image = UIGraphicsGetImageFromCurrentImageContext()
+////        UIGraphicsEndImageContext()
+////        
+////        UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+//    }
+//    
  
     func makeChart(dataPoints: [Int], values: [Int]) {
         setChart.noDataText = "You don't yet have enough data to produce your weekly chart."
