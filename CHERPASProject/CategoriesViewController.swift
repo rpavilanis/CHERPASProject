@@ -215,7 +215,6 @@ class CategoriesViewController: UITableViewController {
         let realm = try! Realm()
         
         let allGoals = realm.objects(Goal)
-        print(allGoals)
         // will also need to add filter so that it includes only appropriate category as well
         let currentGoals = allGoals.filter("createdAt BETWEEN %@", [monthStart, monthEnd])
         print(currentGoals)

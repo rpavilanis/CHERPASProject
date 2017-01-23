@@ -46,11 +46,6 @@ class GoalsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         let realm = try! Realm()
         try! realm.write {
             realm.add(goal)
-            print("Added \(goal.desc) to Realm")
-            print(goal.isCompleted)
-            print(goal.createdAt)
-            print(goal.category)
-            print(goal.timeSpan)
         }
         dismiss(animated: true, completion: nil)
     }
