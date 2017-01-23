@@ -56,18 +56,18 @@
                                 <rect key="frame" x="0.0" y="56" width="375" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vjd-6M-VPE" id="Tyq-2L-nhI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HNr-HH-I5t">
-                                            <rect key="frame" x="15" y="13" width="37" height="23"/>
+                                            <rect key="frame" x="15" y="14" width="37" height="22.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jCR-4x-rZf">
-                                            <rect key="frame" x="15" y="36" width="64" height="23"/>
+                                            <rect key="frame" x="15" y="36.5" width="63.5" height="22.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -119,11 +119,11 @@
                                 <rect key="frame" x="0.0" y="56" width="375" height="94"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zd0-v7-IDb" id="HSJ-d3-rIt">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="93.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bUb-m1-SbE">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="93"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="93.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -201,6 +201,113 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVe-Y6-yMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1271.2" y="856.82158920539734"/>
+        </scene>
+        <!--Accomplishments-->
+        <scene sceneID="SDY-Xo-dCX">
+            <objects>
+                <collectionViewController storyboardIdentifier="AchievementsCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CWK-c1-eyR" customClass="AchievementsCollectionViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Hzt-oX-7U5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.86777901339999997" blue="0.59201948810000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="2" id="DsF-29-poY">
+                            <size key="itemSize" width="159" height="159"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="accomplishment" id="5Et-4o-D2k" customClass="AccomplishmentsCollectionViewCell" customModule="CHERPASProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="159" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="159" height="159"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmI-hk-Zjq">
+                                            <rect key="frame" x="8" y="8" width="143" height="143"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="myLabel" destination="VmI-hk-Zjq" id="xOg-oF-F5x"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="CWK-c1-eyR" id="v2e-Jb-sQQ"/>
+                            <outlet property="delegate" destination="CWK-c1-eyR" id="Gic-Q1-pbi"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Accomplishments" id="CYM-05-0RY">
+                        <barButtonItem key="leftBarButtonItem" image="Menu-50 (1)" id="Jbv-5R-wCZ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barBtn" destination="Jbv-5R-wCZ" id="s8p-Sh-VLf"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anE-3K-uas" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4055.1999999999998" y="859.52023988005999"/>
+        </scene>
+        <!--Yearly Category Chart-->
+        <scene sceneID="CGA-6l-swp">
+            <objects>
+                <viewController id="TLl-sK-Y0V" customClass="PieChartViewController" customModule="CHERPASProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zlx-Qs-FBb"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Es-oa-kNs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L8y-zw-1BF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="goC-wK-naD" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="154" width="343" height="513"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tasks Completed by Category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tv4-Pf-YKn">
+                                <rect key="frame" x="16" y="73" width="343" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Yearly Category Chart" id="vLi-C6-wwv">
+                        <barButtonItem key="leftBarButtonItem" image="Menu-50 (1)" id="tcm-Uq-JyP"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" style="plain" id="F2L-V7-TY8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="J4M-pu-WAD">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveChart:" destination="2VP-J7-EDU" eventType="touchUpInside" id="Nse-AM-6rL"/>
+                                    <action selector="saveChart:" destination="TLl-sK-Y0V" eventType="touchUpInside" id="bD4-bt-DaV"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="saveChart:" destination="2VP-J7-EDU" id="b48-N5-84N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barBtn" destination="tcm-Uq-JyP" id="1d7-ye-uGa"/>
+                        <outlet property="pieChartView" destination="goC-wK-naD" id="bjz-O9-b73"/>
+                        <outlet property="saveChart" destination="F2L-V7-TY8" id="vwR-hK-ITt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tqs-YR-bif" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3112" y="860"/>
         </scene>
         <!--Weekly Chart-->
         <scene sceneID="y8w-Pf-AZa">
@@ -586,6 +693,8 @@
                         <segue destination="iGS-lA-OKo" kind="show" id="uX7-D1-ZwF"/>
                         <segue destination="ige-zs-Awl" kind="show" id="8Nu-AS-jc7"/>
                         <segue destination="FDH-5h-vhC" kind="show" id="EFe-Py-gyF"/>
+                        <segue destination="TLl-sK-Y0V" kind="show" id="Uwd-Rf-IU8"/>
+                        <segue destination="CWK-c1-eyR" kind="show" id="OP3-Iy-B25"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tif-9v-Ywz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -633,7 +742,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRi-Ge-Yyp">
                                 <rect key="frame" x="0.0" y="1" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.80259810379999996" blue="0.4980952199" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="1" green="0.80392156862745101" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="300"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -788,6 +897,6 @@
         <image name="right-chevron" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kw2-lY-cQE"/>
+        <segue reference="2rv-Sb-jQz"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC59058C1E36898500BC8D46 /* AchievementsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59058B1E36898500BC8D46 /* AchievementsCollectionViewController.swift */; };
+		CC59058E1E36960700BC8D46 /* AccomplishmentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC59058D1E36960700BC8D46 /* AccomplishmentsCollectionViewCell.swift */; };
 		CC5946BB1E26F2C10019ED32 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5946B61E26F2B60019ED32 /* Charts.framework */; };
 		CC5946BC1E26F2C10019ED32 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC5946B61E26F2B60019ED32 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC5946BF1E26F2C10019ED32 /* ChartsRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5946B81E26F2B60019ED32 /* ChartsRealm.framework */; };
@@ -20,6 +22,7 @@
 		CC5946DA1E29C3190019ED32 /* MonthlyChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5946D91E29C3190019ED32 /* MonthlyChartViewController.swift */; };
 		CC5946DC1E29DB2F0019ED32 /* SetMonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5946DB1E29DB2F0019ED32 /* SetMonthlyViewController.swift */; };
 		CC5946DE1E29DB510019ED32 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5946DD1E29DB510019ED32 /* GoalsViewController.swift */; };
+		CC64EBE41E328A0600603C19 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC64EBE31E328A0600603C19 /* PieChartViewController.swift */; };
 		CC7DF91F1E2056790079A53E /* DayOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DF91E1E2056790079A53E /* DayOverviewTableViewCell.swift */; };
 		CCA756281E1D8F4F00A8D4FB /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */; };
 		CCA7562A1E1ECD5100A8D4FB /* SetDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA756291E1ECD5100A8D4FB /* SetDailyViewController.swift */; };
@@ -109,6 +112,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC59058B1E36898500BC8D46 /* AchievementsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsCollectionViewController.swift; sourceTree = "<group>"; };
+		CC59058D1E36960700BC8D46 /* AccomplishmentsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccomplishmentsCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC5946AF1E26F2B60019ED32 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../Charts-3.0.1/Charts.xcodeproj"; sourceTree = "<group>"; };
 		CC5946CA1E2714380019ED32 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		CC5946CD1E2817700019ED32 /* CHERPASProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CHERPASProject-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -121,6 +126,7 @@
 		CC5946D91E29C3190019ED32 /* MonthlyChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyChartViewController.swift; sourceTree = "<group>"; };
 		CC5946DB1E29DB2F0019ED32 /* SetMonthlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetMonthlyViewController.swift; sourceTree = "<group>"; };
 		CC5946DD1E29DB510019ED32 /* GoalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
+		CC64EBE31E328A0600603C19 /* PieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
 		CC7DF91E1E2056790079A53E /* DayOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		CCA756291E1ECD5100A8D4FB /* SetDailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetDailyViewController.swift; sourceTree = "<group>"; };
@@ -226,14 +232,17 @@
 				CCA756271E1D8F4F00A8D4FB /* TasksViewController.swift */,
 				CC5946D91E29C3190019ED32 /* MonthlyChartViewController.swift */,
 				CC5946CA1E2714380019ED32 /* ChartViewController.swift */,
+				CC64EBE31E328A0600603C19 /* PieChartViewController.swift */,
 				CC5946D11E2821710019ED32 /* MenuViewController.swift */,
 				CC5946D31E28218C0019ED32 /* MenuTableViewCell.swift */,
 				CC5946D51E29884A0019ED32 /* DailyCHERPASNotificationsViewController.swift */,
 				CC5946D71E29BF980019ED32 /* EndDailyCHERPASNotificationsViewController.swift */,
-				CCA966651E1C64EA00C551D1 /* LaunchScreen.storyboard */,
 				CCA7562D1E1EE94800A8D4FB /* CategoryTableViewCell.swift */,
 				CC7DF91E1E2056790079A53E /* DayOverviewTableViewCell.swift */,
+				CC59058B1E36898500BC8D46 /* AchievementsCollectionViewController.swift */,
+				CC59058D1E36960700BC8D46 /* AccomplishmentsCollectionViewCell.swift */,
 				CCA966681E1C64EA00C551D1 /* Info.plist */,
+				CCA966651E1C64EA00C551D1 /* LaunchScreen.storyboard */,
 			);
 			path = CHERPASProject;
 			sourceTree = "<group>";
@@ -443,12 +452,15 @@
 				CC5946D61E29884A0019ED32 /* DailyCHERPASNotificationsViewController.swift in Sources */,
 				CCA7562C1E1ED9BF00A8D4FB /* DayOverviewViewController.swift in Sources */,
 				CC7DF91F1E2056790079A53E /* DayOverviewTableViewCell.swift in Sources */,
+				CC59058C1E36898500BC8D46 /* AchievementsCollectionViewController.swift in Sources */,
 				CC5946DE1E29DB510019ED32 /* GoalsViewController.swift in Sources */,
 				CC5946D41E28218C0019ED32 /* MenuTableViewCell.swift in Sources */,
 				CCA966941E1C685800C551D1 /* Task.swift in Sources */,
+				CC64EBE41E328A0600603C19 /* PieChartViewController.swift in Sources */,
 				CCA7562A1E1ECD5100A8D4FB /* SetDailyViewController.swift in Sources */,
 				CC5946D81E29BF980019ED32 /* EndDailyCHERPASNotificationsViewController.swift in Sources */,
 				CC5946DA1E29C3190019ED32 /* MonthlyChartViewController.swift in Sources */,
+				CC59058E1E36960700BC8D46 /* AccomplishmentsCollectionViewCell.swift in Sources */,
 				CC5946D21E2821710019ED32 /* MenuViewController.swift in Sources */,
 				CCA756281E1D8F4F00A8D4FB /* TasksViewController.swift in Sources */,
 				CC5946CB1E2714380019ED32 /* ChartViewController.swift in Sources */,
