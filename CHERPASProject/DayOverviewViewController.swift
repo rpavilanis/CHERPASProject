@@ -74,9 +74,9 @@ class DayOverviewViewController: UITableViewController {
         
         let tasksToday = realm.objects(DailyTask.self).filter("createdAt BETWEEN %@", [todayStart, todayEnd])
         let selectedTask = tasksToday.filter("name = %@", self.sentData1)
-        
+            print("selected task is \(selectedTask)")
         for task in selectedTask {
-            
+            print("task is \(task)")
             if task.isCompleted == true {
                 let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData1)
                 attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
@@ -105,7 +105,7 @@ class DayOverviewViewController: UITableViewController {
         let goalsToday = realm.objects(Goal.self).filter("createdAt BETWEEN %@", [monthStart, monthEnd])
         let monthGoals = goalsToday.filter("timeSpan = 'Month'")
         let selectedGoal = monthGoals.filter("desc = %@", self.sentData2)
-        
+        print(selectedGoal)
         for goal in selectedGoal {
             
             if goal.isCompleted == true {
@@ -276,10 +276,10 @@ class DayOverviewViewController: UITableViewController {
                 
                 let tasksToday = realm.objects(DailyTask.self).filter("createdAt BETWEEN %@", [todayStart, todayEnd])
                 let selectedTask = tasksToday.filter("name = %@", self.sentData1)[indexPath.row]
-                
+                 print("selected task before marking complete is \(selectedTask)")
                 try! realm.write {
                     selectedTask.isCompleted = true
-                    
+                     print("selected task after marking complete is \(selectedTask)")
                 }
                 if selectedTask.isCompleted == true {
                     let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self.sentData1)
