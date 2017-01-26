@@ -73,7 +73,7 @@ class AchievementsCollectionViewController: UICollectionViewController {
         cell.myLabel.text = completed[indexPath.item]
         cell.myLabel.textColor = UIColor(red: 27/255, green: 124/255, blue: 150/255, alpha: 1.0)
         cell.myLabel.sizeToFit()
-        cell.layer.borderColor = UIColor(red: 130/255, green: 208/255, blue: 216/255, alpha: 1.0).cgColor
+        cell.layer.borderColor = UIColor.white.cgColor
         cell.layer.borderWidth = 3
         cell.layer.cornerRadius = 10
 
